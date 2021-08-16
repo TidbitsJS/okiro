@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 
   padding: 2rem 4rem;
   position: relative;
@@ -62,12 +62,15 @@
   justify-content: flex-start;
   min-width: 170px;
   position: absolute;
-  top: 110%;
+  top: 150%;
   right: -10%;
 
   background: var(--color-two);
   padding: 1rem 0.7rem;
   border-radius: 10px;
+
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .okiro__header__dotLinks ul {
@@ -116,11 +119,14 @@
   justify-content: flex-end;
 
   background-color: var(--color-two);
-  top: 130%;
+  top: 170%;
   right: -1%;
   padding: 1.5rem 1rem;
   border-radius: 10px;
   min-width: 170px;
+
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .okiro__header__hamburger--linksDiv ul {
@@ -153,5 +159,10 @@
 @media screen and (max-width: 600px) {
   .okiro__header {
     padding: 1rem;
+  }
+
+  .okiro__header__logo img {
+    width: 90px;
+    height: 35px;
   }
 }

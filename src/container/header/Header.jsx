@@ -49,10 +49,16 @@ const Header = () => {
       </div>
 
       <div className="okiro__header__hamburger">
-        <HiOutlineMenuAlt1
-          fontSize={32}
+        <div
           onClick={() => setShowMenuLinks(!showMenuLinks)}
-        />
+          className={`hamburger hamburger--collapse  ${
+            showMenuLinks ? "is-active" : ""
+          }  `}
+        >
+          <div className="hamburger-box">
+            <div className="hamburger-inner"></div>
+          </div>
+        </div>
 
         {showMenuLinks ? (
           <div className="okiro__header__hamburger--linksDiv">

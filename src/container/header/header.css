@@ -5,9 +5,12 @@
   align-items: center;
 
   padding: 2rem 4rem;
+  position: relative;
+  user-select: none;
 }
 
 .okiro__header__logo {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +27,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .okiro__header__links ul,
@@ -34,7 +38,8 @@
 }
 
 .okiro__header__links li,
-.okiro__header__sign li {
+.okiro__header__sign li,
+.okiro__header__hamburger--linksDiv li {
   display: flex;
   list-style: none;
   margin: 0rem 0.7rem;
@@ -45,4 +50,108 @@
   color: var(--color-font);
   font-weight: 900;
   cursor: pointer;
+  position: relative;
+}
+
+.okiro__header__links {
+  position: relative;
+}
+
+.okiro__header__dotLinks {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 170px;
+  position: absolute;
+  top: 110%;
+  right: -10%;
+
+  background: var(--color-two);
+  padding: 1rem 0.7rem;
+  border-radius: 10px;
+}
+
+.okiro__header__dotLinks ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.okiro__header__dotLinks li {
+  text-align: left;
+  margin: 0.3rem 0.7rem;
+}
+
+.special-link:hover:before,
+.special-link:hover:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border-radius: 100%;
+  background: var(--color-three);
+  top: 1px;
+  right: -7px;
+
+  transition: background-color 0.3s ease;
+}
+
+.special-link:active:before,
+.special-link:focus:before {
+  background: var(--accent-color);
+}
+
+.okiro__header__hamburger {
+  display: none;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+}
+
+.okiro__header__hamburger--linksDiv {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: var(--color-two);
+  top: 130%;
+  right: -1%;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  min-width: 170px;
+}
+
+.okiro__header__hamburger--linksDiv ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.okiro__header__hamburger--linksDiv li {
+  margin: 0.3rem;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 999px) {
+  .okiro__header__sign,
+  .okiro__header__links {
+    display: none;
+  }
+
+  .okiro__header__logo {
+    justify-content: flex-start;
+  }
+
+  .okiro__header__hamburger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .okiro__header {
+    padding: 1rem;
+  }
 }

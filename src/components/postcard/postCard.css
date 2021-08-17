@@ -1,0 +1,58 @@
+.okiro__post-card {
+  /* width: 200px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  display: inline-block;
+
+  padding: 1.3rem;
+  background: #d7f8ff;
+  border-radius: 20px;
+
+  margin: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.okiro__post-card:hover {
+  transform: translateY(-4px);
+}
+
+.okiro__post-card__image {
+  display: flex;
+  height: 175px;
+}
+
+.okiro__post-card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.okiro__post-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+
+  margin: 0.8rem 0.5rem 0rem;
+}
+
+.okiro__post-card__content h3 {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--color-font);
+  line-height: 1.5;
+  font-family: var(--font-base);
+  cursor: pointer;
+}
+
+.okiro__post-card__content p {
+  font-size: 13px;
+  font-family: var(--font-alt);
+  font-weight: 800;
+  color: var(--color-font);
+  word-break: break-all;
+  cursor: pointer;
+
+  margin-top: 0.4rem;
+}

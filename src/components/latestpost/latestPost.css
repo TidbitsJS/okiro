@@ -1,0 +1,135 @@
+.okiro__homepage__latest {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+
+.okiro__homepage__latest-img {
+  flex: 4;
+  display: flex;
+  margin: 0rem 1rem;
+}
+
+.okiro__homepage__latest-img img {
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.okiro__homepage__latest-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+
+.okiro__post-tag {
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.06);
+  width: max-content;
+
+  border-radius: 10px;
+  font-family: var(--font-base);
+  font-size: 9px;
+  line-height: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-indent: 3px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.okiro__homepage__latest-content h2 {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 54px;
+  color: var(--color-font);
+  line-height: 1.2;
+  font-weight: 900;
+  font-family: var(--font-base);
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.okiro__homepage__latest-content_shortpara {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 0rem 2rem;
+}
+
+.okiro__homepage__latest-content_shortpara svg {
+  width: 90px;
+  fill: rgba(0, 0, 0, 0.06);
+}
+
+.okiro__homepage__latest-content_shortpara p {
+  margin-top: 0.3rem;
+  font-family: var(--font-alt);
+  font-size: 18px;
+  font-weight: 800;
+  width: 90%;
+  color: var(--color-font);
+  line-height: 1.5;
+}
+
+.okiro__author {
+  display: flex;
+  flex-direction: row;
+}
+
+.okiro__author-img {
+  display: flex;
+}
+
+.okiro__author-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.okiro__author-info {
+  margin-left: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.okiro__author-info h3 {
+  margin-bottom: 0.1rem;
+  font-family: var(--font-base);
+  color: var(--color-font);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.okiro__author-info p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-family: var(--font-alt);
+  color: var(--color-font);
+}
+
+@media screen and (max-width: 1000px) {
+  .okiro__homepage__latest-content_shortpara {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .okiro__homepage__latest {
+    flex-direction: column;
+  }
+
+  .okiro__homepage__latest-content_shortpara {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .okiro__homepage__latest-content h2 {
+    font-size: 36px;
+  }
+}

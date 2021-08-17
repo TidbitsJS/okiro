@@ -63,7 +63,7 @@ const postData = [
     url: photo04,
     title: "I always loved aesthetics",
     authors: "Hannash Weastell",
-    color: "#ffeab9 #f4f4f7",
+    color: "#ffeab9",
   },
   {
     id: "post-09",

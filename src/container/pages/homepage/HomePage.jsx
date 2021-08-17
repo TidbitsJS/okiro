@@ -1,4 +1,5 @@
 import React from "react";
+import LatestPost from "../../../components/latestpost/LatestPost";
 import PreviewPosts from "../../../components/preview/PreviewPosts";
 import postData from "../../../data/post/post";
 
@@ -8,7 +9,8 @@ const HomePage = () => {
   return (
     <div className="okiro__homepage">
       <PreviewPosts postData={postData.slice(0, 5)} title="featured" />
-      <PreviewPosts postData={postData.slice(6)} title="story" />
+      <LatestPost />
+      <PreviewPosts postData={postData.slice(5)} title="story" />
     </div>
   );
 };

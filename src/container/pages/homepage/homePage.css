@@ -14,6 +14,7 @@
   flex: 0.2;
   display: flex;
   position: relative;
+  margin-right: 1rem;
 }
 
 .okiro__hompage__featured-title h2 {
@@ -25,11 +26,15 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 0;
-  transform: translate(-30%, 120px) rotate(-90deg);
+  transform: translate(-30%, 40px) rotate(-90deg);
   text-align: right;
   letter-spacing: 8px;
   text-transform: uppercase;
   font-family: var(--font-base);
+}
+
+.okiro__hompage__featured-zigzag {
+  display: none;
 }
 
 .okiro__homepage__featured-posts {
@@ -37,12 +42,6 @@
   columns: 3 200px;
   column-gap: 0;
   width: 100%;
-
-  /* display: flex;
-  align-items: flex-start;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: space-between; */
 }
 
 @media screen and (min-width: 1100px) {
@@ -52,7 +51,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .okiro__homepage__featured {
     flex-direction: column;
   }
@@ -60,6 +59,7 @@
   .okiro__hompage__featured-title {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
 
     margin-bottom: 1rem;
@@ -69,5 +69,20 @@
     transform: none;
     text-align: center;
     position: unset;
+
+    font-size: 19px;
+  }
+
+  .okiro__hompage__featured-zigzag {
+    display: flex;
+    width: 90px;
+    fill: rgba(0, 0, 0, 0.06);
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .okiro__homepage {
+    padding: 2rem 0.5rem;
   }
 }

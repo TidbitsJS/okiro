@@ -124,6 +124,7 @@
   padding: 1.5rem 1rem;
   border-radius: 10px;
   min-width: 170px;
+  z-index: 5;
 
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

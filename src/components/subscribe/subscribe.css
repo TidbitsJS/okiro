@@ -1,0 +1,77 @@
+.okiro__subscribe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 3rem;
+}
+
+.okiro__subscribe-text {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.okiro__subscribe-text h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  font-weight: 800;
+  font-family: var(--font-base);
+  color: var(--color-font);
+}
+
+.okiro__subscribe-input {
+  display: flex;
+  background: var(--color-two);
+  padding: 0.75rem;
+
+  border-radius: 50px;
+}
+
+.okiro__subscribe-input input {
+  font-size: 15px;
+  font-family: var(--font-alt);
+  outline: none;
+  font-weight: 500;
+  border: none;
+  width: 210px;
+  background: transparent;
+  padding: 0 0.5rem;
+  transition: width 0.3s ease 0.2s;
+}
+
+.okiro__subscribe-input input:focus,
+.okiro__subscribe-input input:active {
+  width: 250px;
+}
+
+@media screen and (max-width: 800px) {
+  .okiro__subscribe {
+    flex-direction: column;
+  }
+  .okiro__subscribe-text {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .okiro__subscribe-input {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .okiro__subscribe-input input {
+    width: 100%;
+  }
+
+  .okiro__subscribe-input input:focus,
+  .okiro__subscribe-input input:active {
+    width: 100%;
+  }
+
+  .okiro__subscribe-text h2 {
+    font-size: 24px;
+  }
+}

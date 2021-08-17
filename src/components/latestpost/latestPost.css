@@ -1,7 +1,7 @@
 .okiro__homepage__latest {
   display: flex;
   flex-direction: row;
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 
 .okiro__homepage__latest-img {
@@ -23,22 +23,6 @@
   flex-direction: column;
 
   padding: 1rem;
-}
-
-.okiro__post-tag {
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.06);
-  width: max-content;
-
-  border-radius: 10px;
-  font-family: var(--font-base);
-  font-size: 9px;
-  line-height: 10px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-indent: 3px;
-  font-weight: 800;
-  cursor: pointer;
 }
 
 .okiro__homepage__latest-content h2 {
@@ -125,6 +109,10 @@
 
   .okiro__homepage__latest-content_shortpara {
     display: flex;
+  }
+
+  .okiro__homepage__latest-img {
+    margin-top: 1rem;
   }
 }
 

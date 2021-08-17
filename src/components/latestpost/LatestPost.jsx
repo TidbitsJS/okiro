@@ -1,5 +1,6 @@
 import React from "react";
 import post11 from "../../assets/images/photo-11.jpeg";
+import Tag from "../tag/Tag";
 
 import "./latestPost.css";
 
@@ -22,7 +23,7 @@ const LatestPost = () => {
         <img src={post11} alt="latest-post" />
       </div>
       <div className="okiro__homepage__latest-content">
-        <div className="okiro__post-tag">creative</div>
+        <Tag title="creative" />
         <h2>I work best when my space is filled with inspiration</h2>
         <div className="okiro__homepage__latest-content_shortpara">
           <svg

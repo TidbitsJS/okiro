@@ -21,11 +21,12 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 0;
-  transform: translate(-30%, 40px) rotate(-90deg);
+  transform: translate(-30%, 70px) rotate(-90deg);
   text-align: right;
   letter-spacing: 8px;
   text-transform: uppercase;
   font-family: var(--font-base);
+  width: max-content;
 }
 
 .okiro__hompage__previewPosts-zigzag {
@@ -73,5 +74,11 @@
     width: 90px;
     fill: rgba(0, 0, 0, 0.06);
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__homepage__previewPosts {
+    padding: 0rem 1rem;
   }
 }

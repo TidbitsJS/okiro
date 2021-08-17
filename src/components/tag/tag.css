@@ -1,0 +1,15 @@
+.okiro__post-tag {
+  padding: 0.7rem;
+  background: rgba(0, 0, 0, 0.06);
+  width: max-content;
+
+  border-radius: 15px;
+  font-family: var(--font-base);
+  font-size: 9px;
+  line-height: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-indent: 3px;
+  font-weight: 800;
+  cursor: pointer;
+}

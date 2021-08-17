@@ -5,7 +5,7 @@
   padding: 2rem;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .okiro__homepage {
     padding: 2rem 0.5rem;
   }

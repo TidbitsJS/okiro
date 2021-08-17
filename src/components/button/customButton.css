@@ -1,0 +1,13 @@
+.okiro__custom-button {
+  display: flex;
+}
+
+.okiro__custom-button button {
+  background: var(--accent-color);
+  color: #fff;
+  border: 2px solid var(--accent-color);
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+}

@@ -1,0 +1,141 @@
+.okiro__footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0rem 4rem;
+  user-select: none;
+}
+
+.okiro__footer-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+
+  margin-top: 3rem;
+}
+
+.okiro__footer-brand {
+  display: flex;
+  flex-direction: column;
+  flex: 2.5;
+}
+
+.okiro__footer-brand img {
+  width: 90px;
+  height: 35px;
+
+  margin-bottom: 1rem;
+}
+
+.okiro__footer-brand p {
+  width: 80%;
+  font-family: var(--font-alt);
+  color: var(--color-font);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  margin-bottom: 2rem;
+}
+
+.okiro__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 2;
+}
+
+.okiro__footer-copyright {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.7rem;
+}
+
+.okiro__footer-copyright div {
+  font-family: var(--font-base);
+  color: var(--color-font);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.okiro__footer-links_div {
+  padding: 1rem 2rem 1rem 0rem;
+  flex: 1;
+}
+
+.okiro__footer-links_div h3 {
+  font-weight: 900;
+  font-family: var(--font-base);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: var(--color-font);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.okiro__footer-links_div-linkDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.okiro__footer-links_div-linkDiv p {
+  color: var(--color-font);
+  font-size: 16px;
+  font-weight: 900;
+  font-family: var(--font-base);
+  text-transform: capitalize;
+  line-height: 1.5;
+
+  margin: 0.5rem 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.okiro__footer-links_div-linkDiv p:hover {
+  color: #132033;
+}
+
+.okiro__footer-brand_media {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.okiro__footer-brand_media svg {
+  margin: 0rem 1.5rem 1rem 0rem;
+  font-size: 30px;
+  cursor: pointer;
+  fill: var(--color-font);
+}
+
+@media screen and (max-width: 900px) {
+  .okiro__footer-content {
+    flex-direction: column;
+  }
+
+  .okiro__footer-links {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .okiro__footer-content {
+    padding: 0;
+  }
+
+  .okiro__footer-copyright {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .okiro__footer {
+    padding: 0 0.7rem;
+  }
+}

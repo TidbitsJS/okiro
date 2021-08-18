@@ -1,5 +1,9 @@
 .okiro__post-card {
-  display: inline-block;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 210px;
+  max-width: 290px;
 
   padding: 1.3rem;
   background: #d7f8ff;
@@ -52,4 +56,10 @@
   cursor: pointer;
 
   margin-top: 0.4rem;
+}
+
+@media screen and (max-width: 300px) {
+  .okiro__post-card {
+    min-width: 100%;
+  }
 }

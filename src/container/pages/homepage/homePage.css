@@ -5,12 +5,21 @@
   padding: 2rem;
 }
 
-.okiro__homepage__show-articles {
-  margin: 2rem 0;
+.okiro__homepage__aritclesDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  margin: 2rem 0;
+}
+
+.okiro__homepage__show-articles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 450px) {

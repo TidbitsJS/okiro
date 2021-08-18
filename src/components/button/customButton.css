@@ -10,4 +10,13 @@
   border-radius: 50px;
   cursor: pointer;
   outline: none;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in;
+}
+
+.okiro__custom-button button:hover {
+  opacity: 1;
 }

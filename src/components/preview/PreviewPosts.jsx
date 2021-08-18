@@ -4,7 +4,6 @@ import PostCard from "../postcard/PostCard";
 import "./previewPosts.css";
 
 const PreviewPosts = ({ postData, title }) => {
-  console.log("PostData", postData);
   return (
     <div className="okiro__homepage__previewPosts">
       <div className="okiro__hompage__previewPosts-title">

@@ -17,6 +17,14 @@ import photo16 from "../../assets/images/photo-16.jpeg";
 
 const postData = [
   {
+    id: "post-08",
+    url: photo11,
+    title: "I work best when my space is filled with inspiration",
+    authors: "Victoria West",
+    color: "#ffeab9",
+    tags: ["creative", "idea", "product"],
+  },
+  {
     id: "post-01",
     url: photo02,
     title: "Don't be afraid",
@@ -79,14 +87,7 @@ const postData = [
     tags: ["home", "idea", "creative", "lifestyle"],
     member: false,
   },
-  {
-    id: "post-08",
-    url: photo11,
-    title: "I work best when my space is filled with inspiration",
-    authors: "Victoria West",
-    color: "#ffeab9",
-    tags: ["creative", "idea", "product"],
-  },
+
   {
     id: "post-09",
     url: photo13,

@@ -30,6 +30,10 @@
   flex: 1;
 }
 
+.okiro__header__sign {
+  justify-content: flex-end;
+}
+
 .okiro__header__links ul,
 .okiro__header__sign ul {
   display: flex;
@@ -116,12 +120,13 @@
 .okiro__header__hamburger--linksDiv {
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  padding-top: 1.5rem;
 
   background-color: var(--color-two);
   top: 170%;
   right: -1%;
-  padding: 1.5rem 1rem;
   border-radius: 10px;
   min-width: 170px;
   z-index: 5;
@@ -135,14 +140,40 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  padding: 0rem 1rem;
 }
 
 .okiro__header__hamburger--linksDiv li {
   margin: 0.3rem;
   font-size: 16px;
+  user-select: none;
 }
 
-@media screen and (max-width: 999px) {
+.okiro__header__hamburger--linkDiv-search {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--accent-color);
+  padding: 1rem;
+  margin-top: 0.7rem;
+
+  font-family: var(--font-base);
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.okiro__header__hamburger--linkDiv-search svg {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1010px) {
   .okiro__header__sign,
   .okiro__header__links {
     display: none;

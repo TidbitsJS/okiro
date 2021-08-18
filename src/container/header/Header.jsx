@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import okiro from "../../assets/okiro.svg";
+import CustomButton from "../../components/button/CustomButton";
 
 import "./header.css";
 
@@ -43,7 +44,9 @@ const Header = () => {
             <FiSearch />
           </li>
           <li className="special-link">Sign in</li>
-          <li>Sign up</li>
+          <li>
+            <CustomButton title="sign up" />
+          </li>
         </ul>
       </div>
 
@@ -70,8 +73,13 @@ const Header = () => {
               <li className=" special-link">About</li>
               <li className=" special-link">Contact</li>
               <li className=" special-link">Sign in</li>
-              <li>Sign up</li>
+              <li style={{ marginTop: 10 }}>
+                <CustomButton title="sign up" />
+              </li>
             </ul>
+            <div className="okiro__header__hamburger--linkDiv-search">
+              search <FiSearch />
+            </div>
           </div>
         ) : null}
       </div>

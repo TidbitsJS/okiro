@@ -5,6 +5,14 @@
   padding: 2rem;
 }
 
+.okiro__homepage__show-articles {
+  margin: 2rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media screen and (max-width: 450px) {
   .okiro__homepage {
     padding: 2rem 0.5rem;

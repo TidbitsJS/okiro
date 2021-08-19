@@ -4,23 +4,61 @@ import CustomButton from "../../../components/button/CustomButton";
 
 import "./membershipPage.css";
 
-const PlanCard = () => {
+const planData = [
+  {
+    type: "free",
+    price: 0,
+    features: [
+      "Full access to posts for subscribers",
+      "Weekly email newsletter",
+      "No Advertising",
+    ],
+  },
+  {
+    type: "monthly",
+    price: 7,
+    features: [
+      "Full access to all premium posts",
+      "Weekly email newsletter",
+      "Support independent publishing",
+      "Simple, secure card payment",
+      "No Advertising",
+    ],
+  },
+  {
+    type: "yearly",
+    price: 29,
+    features: [
+      "Full access to all premium posts",
+      "Weekly email newsletter",
+      "Support independent publishing",
+      "Simple, secure card payment",
+      "One easy payment instead of 12!",
+      "No Advertising",
+    ],
+  },
+];
+
+const PlanCard = ({ plan: { type, price, features } }) => {
   return (
-    <div className="okiro__membership-plans_div">
-      <div className="okiro__membership-plans_div-card">
-        <div className="okiro__membership-plans_div-card_type">Free</div>
-        <div className="okiro__membership-plans_div-card_amount">
-          <FaDollarSign />
-          <h1>17</h1>
-        </div>
-        <div className="okiro__membership-plans_div-card_content">
-          <p>Full access to posts for subscribers</p>
-          <p>Weekly email newsletter</p>
-          <p>No advertising</p>
-        </div>
-        <div className="okiro__membership-plans_div-card_button">
-          <CustomButton title="Subscribe now" />
-        </div>
+    <div className="okiro__membership-plans_div-card">
+      <div className="okiro__membership-plans_div-card_type">{type}</div>
+      <div className="okiro__membership-plans_div-card_amount">
+        <h1>
+          {" "}
+          <span>
+            <FaDollarSign fontSize={34} />
+          </span>
+          {price}
+        </h1>
+      </div>
+      <div className="okiro__membership-plans_div-card_content">
+        {features.map((feature, index) => (
+          <p key={feature + index}>{feature}</p>
+        ))}
+      </div>
+      <div className="okiro__membership-plans_div-card_button">
+        <CustomButton title="Subscribe now" />
       </div>
     </div>
   );
@@ -48,7 +86,11 @@ const MembershipPage = () => {
 
       <div className="okiro__membership-plans">
         <h3>Choose your plan</h3>
-        <PlanCard />
+        <div className="okiro__membership-plans_div">
+          {planData.map((plan, index) => (
+            <PlanCard plan={plan} key={plan.type + index} />
+          ))}
+        </div>
       </div>
     </div>
   );

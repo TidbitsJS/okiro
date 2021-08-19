@@ -1,15 +1,23 @@
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./container/footer/Footer";
 import Header from "./container/header/Header";
 import HomePage from "./container/pages/homepage/HomePage";
+import MembershipPage from "./container/pages/membership/MembershipPage";
+
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <HomePage />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/membership" component={MembershipPage} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -108,6 +108,17 @@
   background: var(--accent-color);
 }
 
+.isActive::before {
+  background: var(--accent-color);
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border-radius: 100%;
+  top: 1px;
+  right: -7px;
+}
+
 .okiro__header__hamburger {
   display: none;
   flex: 1;

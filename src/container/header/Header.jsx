@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import okiro from "../../assets/okiro.svg";
@@ -14,9 +15,21 @@ const Header = () => {
     <div className="okiro__header">
       <div className="okiro__header__links">
         <ul>
-          <li className="special-link">Home</li>
-          <li className="special-link">Membership</li>
-          <li className="special-link">Features</li>
+          <li className="special-link">
+            <NavLink exact to="/" activeClassName="isActive">
+              Home
+            </NavLink>
+          </li>
+          <li className="special-link">
+            <NavLink exact to="/membership" activeClassName="isActive">
+              Membership
+            </NavLink>
+          </li>
+          <li className="special-link">
+            <NavLink exact to="/features" activeClassName="isActive">
+              Features
+            </NavLink>
+          </li>
           <li>
             <BsThreeDots onClick={() => setShowDotLinks(!showDotLinks)} />
           </li>
@@ -25,11 +38,31 @@ const Header = () => {
         {showDotLinks ? (
           <div className="okiro__header__dotLinks">
             <ul>
-              <li className="special-link">Authors</li>
-              <li className="special-link">Tags</li>
-              <li className="special-link">About</li>
-              <li className="special-link">Subscribe</li>
-              <li className="special-link">Contact</li>
+              <li className="special-link">
+                <NavLink exact to="/authors" activeClassName="isActive">
+                  Authors
+                </NavLink>
+              </li>
+              <li className="special-link">
+                <NavLink exact to="/tags" activeClassName="isActive">
+                  Tags
+                </NavLink>
+              </li>
+              <li className="special-link">
+                <NavLink exact to="/about" activeClassName="isActive">
+                  About
+                </NavLink>
+              </li>
+              <li className="special-link">
+                <NavLink exact to="/subscribe" activeClassName="isActive">
+                  Subscribe
+                </NavLink>
+              </li>
+              <li className="special-link">
+                <NavLink exact to="contact" activeClassName="isActive">
+                  Contact
+                </NavLink>
+              </li>
             </ul>
           </div>
         ) : null}
@@ -43,7 +76,11 @@ const Header = () => {
           <li>
             <FiSearch />
           </li>
-          <li className="special-link">Sign in</li>
+          <li className="special-link">
+            <NavLink exact to="signin" activeClassName="isActive">
+              Sign in
+            </NavLink>
+          </li>
           <li>
             <CustomButton title="sign up" />
           </li>
@@ -65,14 +102,46 @@ const Header = () => {
         {showMenuLinks ? (
           <div className="okiro__header__hamburger--linksDiv">
             <ul>
-              <li className=" special-link">Home</li>
-              <li className=" special-link">Membership</li>
-              <li className=" special-link">Features</li>
-              <li className=" special-link">Authors</li>
-              <li className=" special-link">Tags</li>
-              <li className=" special-link">About</li>
-              <li className=" special-link">Contact</li>
-              <li className=" special-link">Sign in</li>
+              <li className=" special-link">
+                <NavLink exact to="/" activeClassName="isActive">
+                  Home
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="/membership" activeClassName="isActive">
+                  Membership
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="/features" activeClassName="isActive">
+                  Features
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="/authors" activeClassName="isActive">
+                  Authors
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="/tags" activeClassName="isActive">
+                  Tags
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="/about" activeClassName="isActive">
+                  About
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="contact" activeClassName="isActive">
+                  Contact
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink exact to="signin" activeClassName="isActive">
+                  Sign in
+                </NavLink>
+              </li>
               <li style={{ marginTop: 10 }}>
                 <CustomButton title="sign up" />
               </li>

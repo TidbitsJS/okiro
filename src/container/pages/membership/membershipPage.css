@@ -1,0 +1,108 @@
+.okiro__membership {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2rem 4rem;
+}
+
+.okiro__membership-welcome {
+  background: url("../../../assets/membership.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-height: 375px;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 2rem 4rem;
+
+  margin-bottom: 2rem;
+}
+
+.okiro__membership-welcome_text {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.5rem 3rem;
+  background: #fff;
+  border-radius: 2rem;
+
+  max-width: 450px;
+}
+
+.okiro__membership-welcome_text h3 {
+  font-size: 45px;
+  line-height: 1.2;
+  font-family: var(--font-base);
+  text-transform: capitalize;
+  font-weight: 900;
+  color: var(--color-font);
+  word-wrap: break-word;
+  word-break: break-all;
+
+  margin: 0.5rem 0rem 1.5rem;
+}
+
+.okiro__membership-welcome_text svg {
+  width: 90px;
+  fill: rgba(0, 0, 0, 0.06);
+}
+
+.okiro__membership-welcome_text p {
+  margin: 0.8rem 0rem 1rem;
+  font-family: var(--font-alt);
+  color: var(--color-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media screen and (max-width: 630px) {
+  .okiro__membership-welcome {
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+  }
+
+  .okiro__membership-welcome_text {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .okiro__membership-welcome_text h3 {
+    font-size: 30px;
+  }
+
+  .okiro__membership-welcome_text p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__membership {
+    padding: 2rem 1.5rem;
+  }
+
+  .okiro__membership-welcome_text {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .okiro__membership {
+    padding: 2rem 0.5rem;
+  }
+
+  .okiro__membership-welcome {
+    padding: 1rem;
+  }
+}

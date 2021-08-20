@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import okiro from "../../assets/okiro.svg";
@@ -16,17 +16,32 @@ const Header = () => {
       <div className="okiro__header__links">
         <ul>
           <li className="special-link">
-            <NavLink exact to="/" activeClassName="isActive">
+            <NavLink
+              exact
+              to="/"
+              activeClassName="isActive"
+              onClick={() => setShowDotLinks(false)}
+            >
               Home
             </NavLink>
           </li>
           <li className="special-link">
-            <NavLink exact to="/membership" activeClassName="isActive">
+            <NavLink
+              exact
+              to="/membership"
+              activeClassName="isActive"
+              onClick={() => setShowDotLinks(false)}
+            >
               Membership
             </NavLink>
           </li>
           <li className="special-link">
-            <NavLink exact to="/features" activeClassName="isActive">
+            <NavLink
+              exact
+              to="/features"
+              activeClassName="isActive"
+              onClick={() => setShowDotLinks(false)}
+            >
               Features
             </NavLink>
           </li>
@@ -39,27 +54,52 @@ const Header = () => {
           <div className="okiro__header__dotLinks">
             <ul>
               <li className="special-link">
-                <NavLink exact to="/authors" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/authors"
+                  activeClassName="isActive"
+                  onClick={() => setShowDotLinks(!showDotLinks)}
+                >
                   Authors
                 </NavLink>
               </li>
               <li className="special-link">
-                <NavLink exact to="/tags" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/tags"
+                  activeClassName="isActive"
+                  onClick={() => setShowDotLinks(!showDotLinks)}
+                >
                   Tags
                 </NavLink>
               </li>
               <li className="special-link">
-                <NavLink exact to="/about" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/about"
+                  activeClassName="isActive"
+                  onClick={() => setShowDotLinks(!showDotLinks)}
+                >
                   About
                 </NavLink>
               </li>
               <li className="special-link">
-                <NavLink exact to="/subscribe" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/subscribe"
+                  activeClassName="isActive"
+                  onClick={() => setShowDotLinks(!showDotLinks)}
+                >
                   Subscribe
                 </NavLink>
               </li>
               <li className="special-link">
-                <NavLink exact to="contact" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="contact"
+                  activeClassName="isActive"
+                  onClick={() => setShowDotLinks(!showDotLinks)}
+                >
                   Contact
                 </NavLink>
               </li>
@@ -69,7 +109,9 @@ const Header = () => {
       </div>
 
       <div className="okiro__header__logo">
-        <img src={okiro} alt="okiro_logo" />
+        <Link to="/">
+          <img src={okiro} alt="okiro_logo" />
+        </Link>
       </div>
       <div className="okiro__header__sign">
         <ul>
@@ -77,12 +119,20 @@ const Header = () => {
             <FiSearch />
           </li>
           <li className="special-link">
-            <NavLink exact to="signin" activeClassName="isActive">
+            <NavLink
+              exact
+              to="signin"
+              activeClassName="isActive"
+              onClick={() => setShowDotLinks(false)}
+            >
               Sign in
             </NavLink>
           </li>
           <li>
-            <CustomButton title="sign up" />
+            <CustomButton
+              title="sign up"
+              click={() => setShowDotLinks(false)}
+            />
           </li>
         </ul>
       </div>
@@ -103,50 +153,96 @@ const Header = () => {
           <div className="okiro__header__hamburger--linksDiv">
             <ul>
               <li className=" special-link">
-                <NavLink exact to="/" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Home
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="/membership" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/membership"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Membership
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="/features" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/features"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Features
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="/authors" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/authors"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Authors
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="/tags" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/tags"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Tags
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="/about" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="/about"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   About
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="contact" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="contact"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Contact
                 </NavLink>
               </li>
               <li className=" special-link">
-                <NavLink exact to="signin" activeClassName="isActive">
+                <NavLink
+                  exact
+                  to="signin"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
                   Sign in
                 </NavLink>
               </li>
               <li style={{ marginTop: 10 }}>
-                <CustomButton title="sign up" />
+                <CustomButton
+                  title="sign up"
+                  click={() => setShowMenuLinks(!showMenuLinks)}
+                />
               </li>
             </ul>
-            <div className="okiro__header__hamburger--linkDiv-search">
+            <div
+              className="okiro__header__hamburger--linkDiv-search"
+              onClick={() => setShowMenuLinks(!showMenuLinks)}
+            >
               search <FiSearch />
             </div>
           </div>

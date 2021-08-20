@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { FaDollarSign } from "react-icons/fa";
 import CustomButton from "../../../components/button/CustomButton";
+import { pageVariants } from "../../../animation/motion";
 
 import "./membershipPage.css";
 
@@ -66,7 +68,13 @@ const PlanCard = ({ plan: { type, price, features } }) => {
 
 const MembershipPage = () => {
   return (
-    <div className="okiro__membership">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="okiro__membership"
+    >
       <div className="okiro__membership-welcome">
         <div className="okiro__membership-welcome_text">
           <h3>Membership</h3>
@@ -92,7 +100,7 @@ const MembershipPage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import ArticleCard from "../../../components/article/ArticleCard";
 import CustomButton from "../../../components/button/CustomButton";
 import LatestPost from "../../../components/latestpost/LatestPost";
 import PreviewPosts from "../../../components/preview/PreviewPosts";
 import Subscribe from "../../../components/subscribe/Subscribe";
 import postData from "../../../data/post/post";
+import { pageVariants } from "../../../animation/motion";
 
 import "./homePage.css";
 
@@ -16,7 +18,13 @@ const HomePage = () => {
   };
 
   return (
-    <div className="okiro__homepage">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="okiro__homepage"
+    >
       <PreviewPosts postData={postData.slice(1, 6)} title="featured" />
       <LatestPost />
       <div className="okiro__homepage__aritclesDiv">
@@ -31,7 +39,7 @@ const HomePage = () => {
       </div>
       <PreviewPosts postData={postData.slice(12)} title="story" />
       <Subscribe />
-    </div>
+    </motion.div>
   );
 };
 

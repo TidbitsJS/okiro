@@ -4,6 +4,7 @@ import Footer from "./container/footer/Footer";
 import Header from "./container/header/Header";
 import HomePage from "./container/pages/homepage/HomePage";
 import MembershipPage from "./container/pages/membership/MembershipPage";
+import SubscribePage from "./container/pages/subscribe/SubscribePage";
 
 import "./App.css";
 
@@ -11,14 +12,19 @@ function App() {
   return (
     <Router>
       <div>
-        <Header />
         <AnimatePresence>
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/membership" component={MembershipPage} />
+            <Route exact path="/subscribe" component={SubscribePage} />
+            <Route>
+              <Header />
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/membership" component={MembershipPage} />
+              </Switch>
+              <Footer />
+            </Route>
           </Switch>
         </AnimatePresence>
-        <Footer />
       </div>
     </Router>
   );

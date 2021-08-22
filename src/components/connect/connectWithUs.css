@@ -1,0 +1,141 @@
+.okiro__connectwithus {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.okiro__connectwithus_image-container {
+  flex: 1.5;
+  display: flex;
+}
+
+.okiro__connectwithus_image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.okiro__connectwithus_form-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.okiro__connectwithus_form-container__logo {
+  display: flex;
+
+  margin-bottom: 2rem;
+}
+
+.okiro__connectwithus_form-container__logo img {
+  width: 112px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.okiro__connectwithus_form-container__heading {
+  display: flex;
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.okiro__connectwithus_form-container__heading h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: var(--color-font);
+  font-family: var(--font-base);
+}
+
+.okiro__connectwithus_form-container__fields {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+
+  margin-bottom: 2rem;
+}
+
+.okiro__connectwithus_form-container__fields-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  margin: 1rem 0rem;
+}
+
+.okiro__connectwithus_form-container__fields-input p {
+  font-size: 13px;
+  text-align: center;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  color: var(--color-font);
+
+  margin-bottom: 0.5rem;
+}
+
+.okiro__connectwithus_form-container__fields-input input {
+  font-size: 22px;
+  text-align: center;
+  border-radius: 3rem;
+  padding: 1.5rem 0;
+  background-color: #f4f4f7;
+  width: 100%;
+  line-height: 1.3;
+  font-family: var(--font-alt);
+  outline: none;
+  border: none;
+  transition: background-color 0.15s ease;
+}
+
+.okiro__connectwithus_form-container__fields-input input:focus,
+.okiro__connectwithus_form-container__fields-input input:active,
+.okiro__connectwithus_form-container__fields-input input:hover {
+  background-color: #ededf1;
+}
+
+@media screen and (max-width: 950px) {
+  .okiro__connectwithus {
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .okiro__connectwithus_image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+  }
+
+  .okiro__connectwithus_form-container {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .okiro__connectwithus_form-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .okiro__connectwithus_form-container__heading h1 {
+    font-size: 22px;
+  }
+
+  .okiro__connectwithus_form-container__fields input {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .okiro__connectwithus_form-container__fields {
+    width: 95%;
+  }
+}

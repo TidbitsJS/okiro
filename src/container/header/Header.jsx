@@ -215,7 +215,7 @@ const Header = () => {
               <li className=" special-link">
                 <NavLink
                   exact
-                  to="contact"
+                  to="/contact"
                   activeClassName="isActive"
                   onClick={() => setShowMenuLinks(!showMenuLinks)}
                 >
@@ -225,7 +225,17 @@ const Header = () => {
               <li className=" special-link">
                 <NavLink
                   exact
-                  to="signin"
+                  to="/subscribe"
+                  activeClassName="isActive"
+                  onClick={() => setShowMenuLinks(!showMenuLinks)}
+                >
+                  Subscribe
+                </NavLink>
+              </li>
+              <li className=" special-link">
+                <NavLink
+                  exact
+                  to="/signin"
                   activeClassName="isActive"
                   onClick={() => setShowMenuLinks(!showMenuLinks)}
                 >

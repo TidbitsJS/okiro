@@ -5,6 +5,7 @@ import Header from "./container/header/Header";
 import HomePage from "./container/pages/homepage/HomePage";
 import MembershipPage from "./container/pages/membership/MembershipPage";
 import SubscribePage from "./container/pages/subscribe/SubscribePage";
+import ContactPage from "./container/pages/contact/ContactPage";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
         <AnimatePresence>
           <Switch>
             <Route exact path="/subscribe" component={SubscribePage} />
+            <Route exact path="/contact" component={ContactPage} />
             <Route>
               <Header />
               <Switch>

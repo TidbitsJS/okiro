@@ -11,12 +11,7 @@ const SubscribePage = () => {
       exit="out"
       variants={pageVariants}
     >
-      <ConnectWithUs
-        title="Subscribe to new"
-        subtitle="posts"
-        btnName="subscribe"
-        message={false}
-      />
+      <ConnectWithUs title="Contact us" btnName="send message" message={true} />
     </motion.div>
   );
 };

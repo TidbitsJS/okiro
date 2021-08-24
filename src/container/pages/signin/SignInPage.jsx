@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { pageVariants } from "../../../animation/motion";
 import ConnectWithUs from "../../../components/connect/ConnectWithUs";
 
-const SubscribePage = () => {
+const SignInPage = () => {
   return (
     <motion.div
       initial="initial"
@@ -12,15 +12,15 @@ const SubscribePage = () => {
       variants={pageVariants}
     >
       <ConnectWithUs
-        title="Subscribe to new"
-        subtitle="posts"
-        nameField={true}
-        btnName="subscribe"
-        imageUrl="subscribe"
+        title="Sign in to Okiro"
+        btnName="send login link"
+        nameField={false}
+        imageUrl="signin"
         textareaField={false}
+        sign="signin"
       />
     </motion.div>
   );
 };
 
-export default SubscribePage;
+export default SignInPage;

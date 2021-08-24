@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { pageVariants } from "../../../animation/motion";
 import ConnectWithUs from "../../../components/connect/ConnectWithUs";
 
-const SubscribePage = () => {
+const SignUpPage = () => {
   return (
     <motion.div
       initial="initial"
@@ -12,15 +12,16 @@ const SubscribePage = () => {
       variants={pageVariants}
     >
       <ConnectWithUs
-        title="Subscribe to new"
-        subtitle="posts"
+        title="Get started with"
+        subtitle="Okiro"
+        btnName="continue"
         nameField={true}
-        btnName="subscribe"
-        imageUrl="subscribe"
+        imageUrl="signup"
         textareaField={false}
+        sign="signup"
       />
     </motion.div>
   );
 };
 
-export default SubscribePage;
+export default SignUpPage;

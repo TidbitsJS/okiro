@@ -11,7 +11,13 @@ const SubscribePage = () => {
       exit="out"
       variants={pageVariants}
     >
-      <ConnectWithUs title="Contact us" btnName="send message" message={true} />
+      <ConnectWithUs
+        title="Contact us"
+        btnName="send message"
+        nameField={true}
+        imageUrl="contact"
+        textareaField={true}
+      />
     </motion.div>
   );
 };

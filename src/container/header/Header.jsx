@@ -121,7 +121,7 @@ const Header = () => {
           <li className="special-link">
             <NavLink
               exact
-              to="signin"
+              to="/signin"
               activeClassName="isActive"
               onClick={() => setShowDotLinks(false)}
             >
@@ -129,10 +129,12 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <CustomButton
-              title="sign up"
-              click={() => setShowDotLinks(false)}
-            />
+            <Link to="/signup">
+              <CustomButton
+                title="sign up"
+                click={() => setShowDotLinks(false)}
+              />
+            </Link>
           </li>
         </ul>
       </div>
@@ -243,10 +245,12 @@ const Header = () => {
                 </NavLink>
               </li>
               <li style={{ marginTop: 10 }}>
-                <CustomButton
-                  title="sign up"
-                  click={() => setShowMenuLinks(!showMenuLinks)}
-                />
+                <Link to="/signup">
+                  <CustomButton
+                    title="sign up"
+                    click={() => setShowMenuLinks(!showMenuLinks)}
+                  />
+                </Link>
               </li>
             </ul>
             <div

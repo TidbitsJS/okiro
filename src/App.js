@@ -6,6 +6,8 @@ import HomePage from "./container/pages/homepage/HomePage";
 import MembershipPage from "./container/pages/membership/MembershipPage";
 import SubscribePage from "./container/pages/subscribe/SubscribePage";
 import ContactPage from "./container/pages/contact/ContactPage";
+import SignUpPage from "./container/pages/signup/SignUpPage";
+import SignInPage from "./container/pages/signin/SignInPage";
 
 import "./App.css";
 
@@ -17,6 +19,8 @@ function App() {
           <Switch>
             <Route exact path="/subscribe" component={SubscribePage} />
             <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/signup" component={SignUpPage} />
+            <Route exact path="/signin" component={SignInPage} />
             <Route>
               <Header />
               <Switch>

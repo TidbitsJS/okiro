@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ArticleCard from "../../../components/article/ArticleCard";
 import CustomButton from "../../../components/button/CustomButton";
@@ -12,6 +12,10 @@ import "./homePage.css";
 
 const HomePage = () => {
   const [numberofArticle, showNumberOfArticle] = useState(11);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const handleClick = () => {
     showNumberOfArticle((prev) => prev + 4);

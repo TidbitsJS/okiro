@@ -6,7 +6,7 @@ import "./articleCard.css";
 import { Link } from "react-router-dom";
 
 const ArticleCard = ({ postData }) => {
-  const { id, url, title, color, authors, tags, member } = postData;
+  const { id, url, title, color, author, tags, member } = postData;
   return (
     <div className="okiro__article-card" style={{ background: color }}>
       <div className="okiro__article-card_img">
@@ -16,7 +16,7 @@ const ArticleCard = ({ postData }) => {
             state: postData,
           }}
         >
-          <img src={url} alt={title + authors} />
+          <img src={url} alt={title + author} />
         </Link>
       </div>
       <div className="okiro__article-card_content">
@@ -29,7 +29,7 @@ const ArticleCard = ({ postData }) => {
           >
             <h3>{title}</h3>
           </Link>
-          <p>{authors}</p>
+          <p>{author}</p>
         </div>
         <div className="okiro__article-card_content-tag">
           <Tag title={tags[0]} />

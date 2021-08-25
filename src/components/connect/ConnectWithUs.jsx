@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import subscribe from "../../assets/subscribe.jpeg";
 import contact from "../../assets/contact.jpeg";
@@ -23,6 +23,10 @@ const ConnectWithUs = ({
   else if (imageUrl === "signin") url = signin;
   else if (imageUrl === "signup") url = signup;
   else url = contact;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div className="okiro__connectwithus">

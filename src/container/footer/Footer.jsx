@@ -5,6 +5,7 @@ import {
   FaWhatsappSquare,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../../assets/okiro.svg";
 
 import "./footer.css";
@@ -32,9 +33,13 @@ const Footer = () => {
           <div className="okiro__footer-links_div">
             <h3>About</h3>
             <div className="okiro__footer-links_div-linkDiv">
-              <p>Features</p>
+              <Link to="/features">
+                <p>Features</p>
+              </Link>
               <p>Style Guide</p>
-              <p>Contact</p>
+              <Link to="/contact">
+                <p>Contact</p>
+              </Link>
               <p>Get Theme</p>
             </div>
           </div>
@@ -43,17 +48,27 @@ const Footer = () => {
             <h3>Features</h3>
             <div className="okiro__footer-links_div-linkDiv">
               <p>Account</p>
-              <p>Membership</p>
-              <p>Sign in</p>
-              <p>Sign up</p>
+              <Link to="/membership">
+                <p>Membership</p>
+              </Link>
+              <Link to="/signin">
+                <p>Sign in</p>
+              </Link>
+              <Link to="signup">
+                <p>Sign up</p>
+              </Link>
             </div>
           </div>
 
           <div className="okiro__footer-links_div">
             <h3>Support</h3>
             <div className="okiro__footer-links_div-linkDiv">
-              <p>Authors</p>
-              <p>Tags</p>
+              <Link to="/authors">
+                <p>Authors</p>
+              </Link>
+              <Link to="/tags">
+                <p>Tags</p>
+              </Link>
               <p>Version</p>
               <p>404</p>
             </div>

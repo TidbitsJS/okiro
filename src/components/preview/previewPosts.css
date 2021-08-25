@@ -21,7 +21,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 0;
-  transform: translate(-30%, 70px) rotate(-90deg);
+  transform: translate(-45%, 70px) rotate(-90deg);
   text-align: right;
   letter-spacing: 8px;
   text-transform: uppercase;

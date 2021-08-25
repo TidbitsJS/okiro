@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import post11 from "../../assets/images/photo-11.jpeg";
 import Tag from "../tag/Tag";
 
 import "./latestPost.css";
 
 const LatestPost = ({ title, post, showAllTags }) => {
+  function randomDate(start, end) {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+
+    return new Date(
+      start.getTime() + Math.random() * (end.getTime() - start.getTime())
+    ).toLocaleDateString("en-US", options);
+  }
+
+  const date = randomDate(new Date(2012, 0, 1), new Date());
+
   return (
     <div className="okiro__homepage__latest">
       {title && (
@@ -71,14 +80,13 @@ const LatestPost = ({ title, post, showAllTags }) => {
 
         <div className="okiro__author">
           <div className="okiro__author-img">
-            <img
-              src="https://source.unsplash.com/1600x900/?child"
-              alt="author"
-            />
+            <img src={post.authorUrl} alt="author" />
           </div>
           <div className="okiro__author-info">
-            <h3>{post.authors}</h3>
-            <p>September 25, 2021 ∙ 3 minutes read </p>
+            <h3>{post.author}</h3>
+            <p>
+              {date} ∙ {Math.floor(Math.random() * 15)} minutes read{" "}
+            </p>
           </div>
         </div>
       </div>

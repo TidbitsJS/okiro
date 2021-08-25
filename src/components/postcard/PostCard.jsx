@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./postCard.css";
 
 const PostCard = ({ post }) => {
-  const { id, title, url, authors, color } = post;
+  const { id, title, url, author, color } = post;
   return (
     <div className="okiro__post-card" style={{ background: color }}>
       <div className="okiro__post-card__image">
@@ -26,7 +26,7 @@ const PostCard = ({ post }) => {
         >
           <h3>{title}</h3>
         </Link>
-        <p>{authors}</p>
+        <p>{author}</p>
       </div>
     </div>
   );

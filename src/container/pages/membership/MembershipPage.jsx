@@ -1,5 +1,5 @@
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import React from "react";
 import { FaDollarSign } from "react-icons/fa";
 import CustomButton from "../../../components/button/CustomButton";
 import { pageVariants } from "../../../animation/motion";
@@ -42,6 +42,10 @@ const planData = [
 ];
 
 const PlanCard = ({ plan: { type, price, features } }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="okiro__membership-plans_div-card">
       <div className="okiro__membership-plans_div-card_type">{type}</div>

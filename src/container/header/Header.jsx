@@ -249,6 +249,7 @@ const Header = () => {
                   <CustomButton
                     title="sign up"
                     click={() => setShowMenuLinks(!showMenuLinks)}
+                    styles={{ padding: "0.5rem 0.7rem", borderRadius: "5px" }}
                   />
                 </Link>
               </li>

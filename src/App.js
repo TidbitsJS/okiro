@@ -9,6 +9,7 @@ import ContactPage from "./container/pages/contact/ContactPage";
 import SignUpPage from "./container/pages/signup/SignUpPage";
 import SignInPage from "./container/pages/signin/SignInPage";
 import BlogPage from "./container/pages/blog/BlogPage";
+import AuthorPage from "./container/pages/author/AuthorPage";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
               <Header />
               <Switch>
                 <Route exact path="/" component={HomePage} />
+                <Route exact path="/authors" component={AuthorPage} />
                 <Route exact path="/membership" component={MembershipPage} />
                 <Route exact path="/article/:id" component={BlogPage} />
               </Switch>

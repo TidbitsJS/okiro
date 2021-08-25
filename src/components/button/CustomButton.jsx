@@ -2,13 +2,13 @@ import React from "react";
 
 import "./customButton.css";
 
-const CustomButton = ({ title, click }) => {
+const CustomButton = ({ title, click, styles }) => {
   return (
     <div
       className="okiro__custom-button"
       onClick={click ? () => click() : null}
     >
-      <button>{title}</button>
+      <button style={styles ? { ...styles } : null}>{title}</button>
     </div>
   );
 };

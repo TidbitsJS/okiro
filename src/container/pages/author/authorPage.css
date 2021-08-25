@@ -1,0 +1,80 @@
+.okiro__authorpage {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem 0;
+  padding: 2rem;
+}
+
+.okiro__authorpage__seealso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.okiro__authorpage__seealso h3 {
+  font-size: 22px;
+  font-weight: 900;
+  font-family: var(--font-base);
+  line-height: 1.5;
+  color: var(--color-font);
+}
+
+.okiro__authorpage__seealso-div {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+
+  background: #f4f4f7;
+  border-radius: 1.2rem;
+  padding: 1rem;
+
+  width: 350px;
+  transition: transform 0.2s ease;
+}
+
+.okiro__authorpage__seealso-div:hover {
+  transform: translateY(-4px);
+}
+
+.okiro__authorpage__seealso-div__img,
+.okiro__authorpage__seealso-div__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.okiro__authorpage__seealso-div__img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.okiro__authorpage__seealso-div__name p {
+  line-height: 1.1;
+  font-size: 19px;
+  font-weight: 900;
+  font-family: var(--font-base);
+  color: var(--color-font);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__authorpage {
+    padding: 2rem 0.5rem;
+  }
+
+  .okiro__authorpage__seealso-div {
+    width: auto;
+  }
+
+  .okiro__authorpage__seealso-div__name {
+    text-align: left;
+  }
+}

@@ -191,12 +191,30 @@ window.uniqueTags = [
 ];
 
 window.uniqueAuthors = [
-  "Megan Anderson",
-  "Hannash Weastell",
-  "Victoria West",
-  "Charles Barrett",
-  "Patricia Jenkins",
-  "Lauren Langford",
+  {
+    authorName: "Megan Anderson",
+    authorUrl: "https://source.unsplash.com/1600x900/?laptop",
+  },
+  {
+    authorName: "Hannash Weastell",
+    authorUrl: "https://source.unsplash.com/1600x900/?car",
+  },
+  {
+    authorName: "Victoria West",
+    authorUrl: "https://source.unsplash.com/1600x900/?nature",
+  },
+  {
+    authorName: "Charles Barrett",
+    authorUrl: "https://source.unsplash.com/1600x900/?travel",
+  },
+  {
+    authorName: "Patricia Jenkins",
+    authorUrl: "https://source.unsplash.com/1600x900/?animals",
+  },
+  {
+    authorName: "Lauren Langford",
+    authorUrl: "https://source.unsplash.com/1600x900/?people",
+  },
 ];
 
 export default postData;

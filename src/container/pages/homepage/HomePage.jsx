@@ -26,7 +26,7 @@ const HomePage = () => {
       className="okiro__homepage"
     >
       <PreviewPosts postData={postData.slice(1, 6)} title="featured" />
-      <LatestPost />
+      <LatestPost title="Latest Posts" post={postData[0]} showAllTags={false} />
       <div className="okiro__homepage__aritclesDiv">
         <div className="okiro__homepage__show-articles">
           {postData.slice(6, numberofArticle).map((post, index) => (

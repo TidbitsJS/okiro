@@ -1,15 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./postCard.css";
 
-const PostCard = ({ post: { title, url, authors, color } }) => {
+const PostCard = ({ post }) => {
+  const { id, title, url, authors, color } = post;
   return (
     <div className="okiro__post-card" style={{ background: color }}>
       <div className="okiro__post-card__image">
-        <img src={url} alt="post-card" />
+        <Link
+          to={{
+            pathname: `/article/${id}`,
+            state: post,
+          }}
+        >
+          <img src={url} alt="post-card" />
+        </Link>
       </div>
       <div className="okiro__post-card__content">
-        <h3>{title}</h3>
+        <Link
+          to={{
+            pathname: `/article/${id}`,
+            state: post,
+          }}
+        >
+          <h3>{title}</h3>
+        </Link>
         <p>{authors}</p>
       </div>
     </div>

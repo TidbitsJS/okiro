@@ -8,6 +8,7 @@ import SubscribePage from "./container/pages/subscribe/SubscribePage";
 import ContactPage from "./container/pages/contact/ContactPage";
 import SignUpPage from "./container/pages/signup/SignUpPage";
 import SignInPage from "./container/pages/signin/SignInPage";
+import BlogPage from "./container/pages/blog/BlogPage";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/membership" component={MembershipPage} />
+                <Route exact path="/article/:id" component={BlogPage} />
               </Switch>
               <Footer />
             </Route>

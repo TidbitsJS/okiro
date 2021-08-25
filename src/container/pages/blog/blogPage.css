@@ -1,0 +1,21 @@
+.okiro__blogpage {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.okiro__blogpage .okiro__homepage__latest {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .okiro__blogpage {
+    padding: 1rem 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .okiro__blogpage {
+    padding: 0rem 0.5rem 2rem;
+  }
+}

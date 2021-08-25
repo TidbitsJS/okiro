@@ -10,12 +10,12 @@
 
 @media screen and (max-width: 800px) {
   .okiro__blogpage {
-    padding: 1rem 2rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .okiro__blogpage {
-    padding: 0rem 0.5rem 2rem;
+    padding: 2rem 0.5rem;
   }
 }

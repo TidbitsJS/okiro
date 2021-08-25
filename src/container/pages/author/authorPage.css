@@ -4,6 +4,7 @@
 
   margin: 1rem 0;
   padding: 2rem;
+  user-select: none;
 }
 
 .okiro__authorpage__seealso {

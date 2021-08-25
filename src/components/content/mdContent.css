@@ -1,0 +1,78 @@
+.okiro__mdContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+
+  padding: 2rem 6rem;
+}
+
+.okiro__mdContent p {
+  font-size: 18px;
+  font-family: var(--font-alt);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-font);
+  margin: 0.3rem 0;
+}
+
+.okiro__mdContent h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-base);
+  margin-top: 0.9rem;
+}
+
+.okiro__mdContent p code {
+  background: #e8eaff;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin: 0 0.1rem;
+}
+
+.okiro__mdContent pre {
+  margin: 1rem 0;
+  background: #f6f7ff;
+  padding: 1rem;
+}
+
+.okiro__mdContent strong {
+  font-weight: 700;
+}
+
+.okiro__mdContent img {
+  width: 100%;
+}
+
+.okiro__mdContent ul {
+  margin: 0.7rem 0rem;
+  font-family: var(--font-base);
+  color: var(--color-font);
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+  .okiro__mdContent {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .okiro__mdContent {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__mdContent {
+    padding: 2rem 1.2rem;
+  }
+}

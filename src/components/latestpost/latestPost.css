@@ -36,11 +36,20 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
 .all_tags {
-  margin-right: 0.5rem;
+  margin: 0.2rem;
+}
+
+.all_tags:first-child {
+  margin-left: 0;
+}
+
+.all_tags:last-child {
+  margin-right: 0;
 }
 
 .okiro__homepage__latest-content h2 {

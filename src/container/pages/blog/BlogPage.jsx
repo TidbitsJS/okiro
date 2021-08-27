@@ -5,6 +5,9 @@ import MdContent from "../../../components/content/MdContent";
 import LatestPost from "../../../components/latestpost/LatestPost";
 import Spinner from "../../../components/spinner/Spinner";
 import { pageVariants } from "../../../animation/motion";
+import SocialIcon from "../../../components/social/SocialIcon";
+import { FaGithubAlt, FaInstagram, FaTwitter } from "react-icons/fa";
+
 import "./blogPage.css";
 
 const BlogPage = () => {
@@ -19,8 +22,6 @@ const BlogPage = () => {
       .then((text) => setMdText(text));
   });
 
-  console.log("total articles", window.totalArticles);
-
   return (
     <motion.div
       initial="initial"
@@ -31,6 +32,11 @@ const BlogPage = () => {
     >
       <LatestPost post={state} showAllTags={true} />
       {mdText ? <MdContent mdText={mdText} /> : <Spinner />}
+      <div className="okiro__blogpage__social-links">
+        <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
+        <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
+        <SocialIcon childIcon={<FaInstagram fontSize={25} />} />
+      </div>
     </motion.div>
   );
 };

@@ -8,6 +8,13 @@
   margin-top: 1rem;
 }
 
+.okiro__blogpage__social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 800px) {
   .okiro__blogpage {
     padding: 2rem;

@@ -15,7 +15,7 @@ const HomePage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   const handleClick = () => {
     showNumberOfArticle((prev) => prev + 4);

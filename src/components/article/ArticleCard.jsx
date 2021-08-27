@@ -10,23 +10,13 @@ const ArticleCard = ({ postData }) => {
   return (
     <div className="okiro__article-card" style={{ background: color }}>
       <div className="okiro__article-card_img">
-        <Link
-          to={{
-            pathname: `/article/${id}`,
-            state: postData,
-          }}
-        >
+        <Link to={{ pathname: `/article/${id}` }}>
           <img src={url} alt={title + author} />
         </Link>
       </div>
       <div className="okiro__article-card_content">
         <div className="okiro__article-card_content-name">
-          <Link
-            to={{
-              pathname: `/article/${id}`,
-              state: postData,
-            }}
-          >
+          <Link to={{ pathname: `/article/${id}` }}>
             <h3>{title}</h3>
           </Link>
           <p>{author}</p>

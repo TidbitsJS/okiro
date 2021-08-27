@@ -33,12 +33,7 @@ const LatestPost = ({ title, post, showAllTags }) => {
       )}
 
       <div className="okiro__homepage__latest-img">
-        <Link
-          to={{
-            pathname: `/article/${post.id}`,
-            state: post,
-          }}
-        >
+        <Link to={{ pathname: `/article/${post.id}` }}>
           <img src={post.url} alt="latest-post" />
         </Link>
       </div>
@@ -54,12 +49,7 @@ const LatestPost = ({ title, post, showAllTags }) => {
           )}
         </div>
 
-        <Link
-          to={{
-            pathname: `/article/${post.id}`,
-            state: post,
-          }}
-        >
+        <Link to={{ pathname: `/article/${post.id}` }}>
           <h2>{post.title}</h2>
         </Link>
 

@@ -1,0 +1,26 @@
+.okiro__authorDetails {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem 4rem;
+}
+
+.okiro__authorDetails_articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__authorDetails {
+    padding: 2rem 1.2em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .okiro__authorDetails {
+    padding: 2rem 0.5rem;
+  }
+}

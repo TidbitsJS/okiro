@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./authorPage.css";
 
@@ -25,10 +26,22 @@ const AuthorPage = () => {
             .map((author, index) => (
               <div className="okiro__post-card" key={author.authorName + index}>
                 <div className="okiro__post-card__image">
-                  <img src={author.authorUrl} alt="post-card" />
+                  <Link
+                    to={{
+                      pathname: `/author/${author.authorName}`,
+                    }}
+                  >
+                    <img src={author.authorUrl} alt="post-card" />
+                  </Link>
                 </div>
                 <div className="okiro__post-card__content">
-                  <h3>{author.authorName}</h3>
+                  <Link
+                    to={{
+                      pathname: `/author/${author.authorName}`,
+                    }}
+                  >
+                    <h3>{author.authorName}</h3>
+                  </Link>
                   <p>better off</p>
                 </div>
               </div>
@@ -39,13 +52,29 @@ const AuthorPage = () => {
         <h3>See Also</h3>
         <div className="okiro__authorpage__seealso-div">
           <div className="okiro__authorpage__seealso-div__img">
-            <img
-              src={window.uniqueAuthors[uniqueAuthorsLength - 1].authorUrl}
-              alt="see also author"
-            />
+            <Link
+              to={{
+                pathname: `/author/${
+                  window.uniqueAuthors[uniqueAuthorsLength - 1].authorName
+                }`,
+              }}
+            >
+              <img
+                src={window.uniqueAuthors[uniqueAuthorsLength - 1].authorUrl}
+                alt="see also author"
+              />
+            </Link>
           </div>
           <div className="okiro__authorpage__seealso-div__name">
-            <p>{window.uniqueAuthors[uniqueAuthorsLength - 1].authorName}</p>
+            <Link
+              to={{
+                pathname: `/author/${
+                  window.uniqueAuthors[uniqueAuthorsLength - 1].authorName
+                }`,
+              }}
+            >
+              <p>{window.uniqueAuthors[uniqueAuthorsLength - 1].authorName}</p>
+            </Link>
           </div>
         </div>
       </div>

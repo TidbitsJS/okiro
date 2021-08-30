@@ -1,4 +1,12 @@
 import { photos, articles } from "./import";
+import {
+  authorbg01,
+  authorbg02,
+  authorbg03,
+  authorbg04,
+  authorbg05,
+  authorbg06,
+} from "../../components/imports/ImageImports";
 
 const postData = [
   {
@@ -159,7 +167,7 @@ const postData = [
     id: "post-15",
     url: photos.photo04,
     title: "I always loved aesthetics",
-    author: "Hannash Weastell",
+    author: "Hannah Weastell",
     authorUrl: "https://source.unsplash.com/1600x900/?car",
     color: "#ffeab9",
     tags: ["home", "story", "creative"],
@@ -194,26 +202,32 @@ window.uniqueAuthors = [
   {
     authorName: "Megan Anderson",
     authorUrl: "https://source.unsplash.com/1600x900/?laptop",
+    authorbg: authorbg01,
   },
   {
-    authorName: "Hannash Weastell",
+    authorName: "Hannah Weastell",
     authorUrl: "https://source.unsplash.com/1600x900/?car",
+    authorbg: authorbg02,
   },
   {
     authorName: "Victoria West",
     authorUrl: "https://source.unsplash.com/1600x900/?nature",
+    authorbg: authorbg03,
   },
   {
     authorName: "Charles Barrett",
     authorUrl: "https://source.unsplash.com/1600x900/?travel",
+    authorbg: authorbg04,
   },
   {
     authorName: "Patricia Jenkins",
     authorUrl: "https://source.unsplash.com/1600x900/?animals",
+    authorbg: authorbg05,
   },
   {
     authorName: "Lauren Langford",
     authorUrl: "https://source.unsplash.com/1600x900/?people",
+    authorbg: authorbg06,
   },
 ];
 

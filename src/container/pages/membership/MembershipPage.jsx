@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FaDollarSign } from "react-icons/fa";
 import CustomButton from "../../../components/button/CustomButton";
 import { pageVariants } from "../../../animation/motion";
+import InfoCard from "../../../components/infocard/InfoCard";
+import { membershipImage } from "../../../components/imports/ImageImports";
 
 import "./membershipPage.css";
 
@@ -79,7 +81,7 @@ const MembershipPage = () => {
       variants={pageVariants}
       className="okiro__membership"
     >
-      <div className="okiro__membership-welcome">
+      <InfoCard imgLink={membershipImage}>
         <div className="okiro__membership-welcome_text">
           <h3>Membership</h3>
           <svg
@@ -94,7 +96,7 @@ const MembershipPage = () => {
             subscribers-only content & updates
           </p>
         </div>
-      </div>
+      </InfoCard>
 
       <div className="okiro__membership-plans">
         <h3>Choose your plan</h3>

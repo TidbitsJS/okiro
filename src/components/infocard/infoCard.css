@@ -1,0 +1,31 @@
+.okiro__infocard {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-height: 375px;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 4rem 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 630px) {
+  .okiro__infocard {
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .okiro__infocard {
+    padding: 1rem;
+  }
+}

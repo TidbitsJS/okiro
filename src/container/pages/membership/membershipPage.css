@@ -6,23 +6,6 @@
   padding: 2rem 4rem;
 }
 
-.okiro__membership-welcome {
-  background: url("../../../assets/membership.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  max-height: 375px;
-  border-radius: 2rem;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  padding: 4rem 4rem;
-  margin-bottom: 2rem;
-}
-
 .okiro__membership-welcome_text {
   display: flex;
   flex-direction: column;
@@ -188,14 +171,6 @@
 }
 
 @media screen and (max-width: 630px) {
-  .okiro__membership-welcome {
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 1rem;
-  }
-
   .okiro__membership-welcome_text {
     width: 100%;
     max-width: 100%;
@@ -228,10 +203,6 @@
 @media screen and (max-width: 350px) {
   .okiro__membership {
     padding: 2rem 0.5rem;
-  }
-
-  .okiro__membership-welcome {
-    padding: 1rem;
   }
 
   .okiro__membership-plans_div-card {

@@ -5,6 +5,10 @@
   padding: 2rem 4rem;
 }
 
+.okiro__authorDetails .okiro__infocard {
+  max-height: unset;
+}
+
 .okiro__authorDetails_articles {
   display: flex;
   flex-wrap: wrap;
@@ -13,9 +17,218 @@
   margin: 1rem 0;
 }
 
-@media screen and (max-width: 450px) {
+.okiro__authorDetails_authorBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.okiro__authorDetails_authorContent {
+  display: flex;
+  flex: 4;
+  height: 100%;
+
+  background: #fff;
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+
+.okiro__authorDetails_authorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 1rem;
+}
+
+.okiro__authorDetails_authorImage {
+  display: flex;
+  max-width: 210px;
+
+  margin-right: 1.3rem;
+  border-radius: 1rem;
+}
+
+.okiro__authorDetails_authorImage img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.okiro__authorDetails_authorContent h1 {
+  font-size: 45px;
+  text-align: left;
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: var(--font-base);
+  color: var(--color-font);
+}
+
+.okiro__authorDetails_authorContent svg {
+  width: 90px;
+  fill: rgba(0, 0, 0, 0.06);
+
+  margin-top: 1.5rem;
+}
+
+.okiro__authorDetails_authorContent p {
+  margin: 1rem 0rem;
+  font-weight: 900;
+  font-family: var(--font-alt);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-font);
+}
+
+.okiro__authorDetails_stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+
+  margin-left: 2rem;
+}
+
+.okiro__authorDetails_authorPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #fff;
+  border-radius: 1rem;
+  max-height: 150px;
+  width: 100%;
+  flex: 2;
+}
+
+.okiro__authorDetails_authorPosts h2 {
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-font);
+  font-family: var(--font-base);
+  margin: 0;
+}
+
+.okiro__authorDetails_authorPosts span {
+  margin-top: 0.2rem;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  font-family: var(--font-alt);
+  color: var(--color-font);
+}
+
+.okiro__authorDetails_authorLinks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex: 0.2;
+
+  margin-left: 1rem;
+}
+
+.okiro__authorDetails_authorLinks .okiro__socialicon {
+  background: #fff;
+}
+
+.okiro__authorDetails_authorLinks .okiro__socialicon:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .okiro__authorDetails_authorBox {
+    flex-direction: column;
+  }
+
+  .okiro__authorDetails_authorPosts {
+    margin: 1rem 1rem 1rem 0;
+    max-height: unset;
+
+    padding: 1rem;
+  }
+
+  .okiro__authorDetails_stats {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .okiro__authorDetails_authorPosts {
+    max-width: 150px;
+  }
+
+  .okiro__authorDetails_authorLinks {
+    flex-direction: row;
+  }
+
+  .okiro__authorDetails_authorLinks .okiro__socialicon:first-child {
+    margin-left: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .okiro__authorDetails_authorContent {
+    flex-direction: column;
+  }
+
+  .okiro__authorDetails_authorImage {
+    width: 100%;
+    height: 250px;
+    max-width: unset;
+    margin-right: 0;
+  }
+
+  .okiro__authorDetails_authorImage img {
+    width: 100%;
+  }
+
+  .okiro__authorDetails_authorContent h1 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
   .okiro__authorDetails {
     padding: 2rem 1.2em;
+  }
+
+  .okiro__authorDetails_authorContent h1 {
+    font-size: 32px;
+  }
+
+  .okiro__authorDetails_authorContent p {
+    font-size: 15px;
+  }
+
+  .okiro__authorDetails_stats {
+    flex-direction: column;
+  }
+
+  .okiro__authorDetails_authorLinks {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .okiro__authorDetails_authorPosts {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__authorDetails_authorContent h1 {
+    font-size: 24px;
+  }
+
+  .okiro__authorDetails_authorInfo {
+    padding: 0rem;
   }
 }
 

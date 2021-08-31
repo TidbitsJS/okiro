@@ -5,6 +5,8 @@ import { authorbg01 } from "../../../components/imports/ImageImports";
 import InfoCard from "../../../components/infocard/InfoCard";
 import Spinner from "../../../components/spinner/Spinner";
 import postData from "../../../data/post/post";
+import SocialIcon from "../../../components/social/SocialIcon";
+import { FaGithubAlt, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import "./authorDetails.css";
 
@@ -12,8 +14,6 @@ const AuthorDetails = () => {
   const [authorInfo, setAuthorInfo] = useState(authorbg01);
   const [authorArticles, setAuthorArticles] = useState();
   const authorParam = useParams();
-
-  console.log("params", authorParam.authorName);
 
   useEffect(() => {
     const getAuthor = window.uniqueAuthors.filter(
@@ -24,7 +24,6 @@ const AuthorDetails = () => {
       (post) => post.author === authorParam.authorName
     );
 
-    console.log("getAuthor", getAuthor, getAuthorPost);
     setAuthorInfo(...getAuthor);
     setAuthorArticles(getAuthorPost);
   }, [authorParam.authorName]);
@@ -34,11 +33,51 @@ const AuthorDetails = () => {
       {authorInfo && authorArticles ? (
         <>
           <InfoCard imgLink={authorInfo.authorbg}>
-            {authorInfo.authorName}
+            <div className="okiro__authorDetails_authorBox">
+              <div className="okiro__authorDetails_authorContent">
+                <div className="okiro__authorDetails_authorImage">
+                  <img src={authorInfo.authorUrl} alt="authorImage" />
+                </div>
+
+                <div className="okiro__authorDetails_authorInfo">
+                  <h1>{authorInfo.authorName}</h1>
+                  <svg
+                    role="img"
+                    viewBox="0 0 136 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z"></path>
+                  </svg>
+
+                  <p>
+                    {" "}
+                    Dici enim nihil potest verius. Sed ne, dum huic obsequor,
+                    vobis molestus sim. Iam id ipsum absurdum, maximum malum
+                    neglegi. Tecum optime, deinde etiam cum mediocri amico.{" "}
+                  </p>
+                </div>
+              </div>
+
+              <div className="okiro__authorDetails_stats">
+                <div className="okiro__authorDetails_authorPosts">
+                  <h2>{authorArticles.length} </h2>
+                  <span>posts</span>
+                </div>
+
+                <div className="okiro__authorDetails_authorLinks">
+                  <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
+                  <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
+                  <SocialIcon childIcon={<FaInstagram fontSize={25} />} />
+                </div>
+              </div>
+            </div>
           </InfoCard>
           <div className="okiro__authorDetails_articles">
-            {authorArticles.map((article) => (
-              <ArticleCard postData={article} key={article.authorName} />
+            {authorArticles.map((article, index) => (
+              <ArticleCard
+                postData={article}
+                key={article.authorName + article.id}
+              />
             ))}
           </div>
         </>

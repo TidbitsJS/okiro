@@ -7,6 +7,10 @@ import {
   authorbg05,
   authorbg06,
 } from "../../components/imports/ImageImports";
+// import {
+//   calculateTotalArticlesPerAuthor,
+//   calculateTotalTagsPerTag,
+// } from "../../utils";
 
 const postData = [
   {
@@ -190,12 +194,30 @@ const postData = [
 window.totalArticles = postData.length;
 
 window.uniqueTags = [
-  "creative",
-  "idea",
-  "product",
-  "story",
-  "home",
-  "lifestyle",
+  {
+    tagName: "creative",
+    tagUrl: "https://source.unsplash.com/1600x900/?creative",
+  },
+  {
+    tagName: "idea",
+    tagUrl: "https://source.unsplash.com/1600x900/?idea",
+  },
+  {
+    tagName: "product",
+    tagUrl: "https://source.unsplash.com/1600x900/?product",
+  },
+  {
+    tagName: "story",
+    tagUrl: "https://source.unsplash.com/1600x900/?story",
+  },
+  {
+    tagName: "home",
+    tagUrl: "https://source.unsplash.com/1600x900/?home",
+  },
+  {
+    tagName: "lifestyle",
+    tagUrl: "https://source.unsplash.com/1600x900/?lifestyle",
+  },
 ];
 
 window.uniqueAuthors = [
@@ -230,5 +252,36 @@ window.uniqueAuthors = [
     authorbg: authorbg06,
   },
 ];
+
+function calculateTotalArticlesPerAuthor(array) {
+  array.forEach((post, index) => {
+    for (let i = 0; i < postData.length; i++) {
+      if (postData[i].author === post.authorName) {
+        if (array[index].total !== undefined) {
+          array[index].total += 1;
+        } else {
+          array[index].total = 1;
+        }
+      }
+    }
+  });
+}
+
+function calculateTotalTagsPerTag(array) {
+  array.forEach((tag, index) => {
+    for (let i = 0; i < postData.length; i++) {
+      if (postData[i].tags.includes(tag.tagName)) {
+        if (array[index].total !== undefined) {
+          array[index].total += 1;
+        } else {
+          array[index].total = 1;
+        }
+      }
+    }
+  });
+}
+
+calculateTotalTagsPerTag(window.uniqueTags);
+calculateTotalArticlesPerAuthor(window.uniqueAuthors);
 
 export default postData;

@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.okiro__post-card__content h3::first-letter {
+  text-transform: capitalize;
+}
+
 .okiro__post-card__content p {
   font-size: 13px;
   font-family: var(--font-alt);

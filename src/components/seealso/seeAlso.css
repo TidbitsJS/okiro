@@ -1,0 +1,86 @@
+.okiro__seealso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.okiro__seealso h3 {
+  font-size: 22px;
+  font-weight: 900;
+  font-family: var(--font-base);
+  line-height: 1.5;
+  color: var(--color-font);
+}
+
+.okiro__seealso-div {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+
+  background: #f4f4f7;
+  border-radius: 1.2rem;
+  padding: 1rem;
+
+  width: 350px;
+  transition: transform 0.2s ease;
+}
+
+.okiro__seealso-div:hover {
+  transform: translateY(-4px);
+}
+
+.okiro__seealso-div__img,
+.okiro__seealso-div__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.okiro__seealso-div__img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.okiro__seealso-div__name p {
+  line-height: 1.1;
+  font-size: 19px;
+  font-weight: 900;
+  font-family: var(--font-base);
+  color: var(--color-font);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.okiro__seealso-div__name p::first-letter {
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__seealso-div {
+    width: auto;
+  }
+
+  .okiro__seealso-div__name {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .okiro__seealso-div {
+    flex-direction: column;
+  }
+
+  .okiro__seealso-div p {
+    margin: 1rem 0rem 0rem;
+  }
+
+  .okiro__seealso-div__name {
+    text-align: center;
+  }
+}

@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import { pageVariants } from "../../../animation/motion";
-
-import "./authorPage.css";
 import SeeAlso from "../../../components/seealso/SeeAlso";
 
-const AuthorPage = () => {
-  const uniqueAuthorsLength = window.uniqueAuthors.length;
+import "./tagPage.css";
 
-  useEffect(() => window.scrollTo(0, 0), []);
+const TagPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  const uniqueTagsLength = window.uniqueTags.length;
 
   return (
     <motion.div
@@ -17,11 +18,11 @@ const AuthorPage = () => {
       animate="in"
       exit="out"
       variants={pageVariants}
-      className="okiro__authorpage"
+      className="okiro__tagpage"
     >
       <div className="okiro__homepage__previewPosts">
         <div className="okiro__hompage__previewPosts-title">
-          <h2>Authors</h2>
+          <h2>Tags</h2>
 
           <svg
             role="img"
@@ -33,41 +34,28 @@ const AuthorPage = () => {
           </svg>
         </div>
         <div className="okiro__homepage__previewPosts-posts">
-          {window.uniqueAuthors
-            .slice(0, uniqueAuthorsLength - 1)
-            .map((author, index) => (
-              <div className="okiro__post-card" key={author.authorName + index}>
+          {window.uniqueTags
+            .slice(0, uniqueTagsLength - 1)
+            .map((tag, index) => (
+              <div className="okiro__post-card" key={tag.tagName + index}>
                 <div className="okiro__post-card__image">
-                  <Link
-                    to={{
-                      pathname: `/author/${author.authorName}`,
-                    }}
-                  >
-                    <img src={author.authorUrl} alt="post-card" />
-                  </Link>
+                  <img src={tag.tagUrl} alt="post-card" />
                 </div>
                 <div className="okiro__post-card__content">
-                  <Link
-                    to={{
-                      pathname: `/author/${author.authorName}`,
-                    }}
-                  >
-                    <h3>{author.authorName}</h3>
-                  </Link>
-                  <p>{author.total} posts</p>
+                  <h3>{tag.tagName}</h3>
+                  <p>{tag.total} posts</p>
                 </div>
               </div>
             ))}
         </div>
       </div>
-
       <SeeAlso
-        url={window.uniqueAuthors[uniqueAuthorsLength - 1].authorUrl}
-        name={window.uniqueAuthors[uniqueAuthorsLength - 1].authorName}
-        link="/author"
+        url={window.uniqueTags[uniqueTagsLength - 1].tagUrl}
+        name={window.uniqueTags[uniqueTagsLength - 1].tagName}
+        link="/tag"
       />
     </motion.div>
   );
 };
 
-export default AuthorPage;
+export default TagPage;

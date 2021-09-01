@@ -42,10 +42,15 @@ const LatestPost = ({ title, post, showAllTags }) => {
         <div className="okiro__homepage__latest-content_tags">
           {showAllTags ? (
             post.tags.map((tag, index) => (
-              <Tag title={tag} key={tag + index * 2} className="all_tags" />
+              <Tag
+                title={tag}
+                key={tag + index * 2}
+                className="all_tags"
+                link={`/tag/${tag}`}
+              />
             ))
           ) : (
-            <Tag title="creative" />
+            <Tag title="creative" link={`/tag/creative`} />
           )}
         </div>
 

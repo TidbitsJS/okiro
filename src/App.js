@@ -12,6 +12,7 @@ import BlogPage from "./container/pages/blog/BlogPage";
 import AuthorPage from "./container/pages/author/AuthorPage";
 import AuthorDetails from "./container/pages/authorDetails/AuthorDetails";
 import TagPage from "./container/pages/tags/TagPage";
+import TagDetails from "./container/pages/tagDetails/TagDetails";
 
 import "./App.css";
 
@@ -38,6 +39,7 @@ function App() {
                 <Route exact path="/membership" component={MembershipPage} />
                 <Route exact path="/article/:id" component={BlogPage} />
                 <Route exact path="/tags" component={TagPage} />
+                <Route exact path="/tag/:tagName" component={TagDetails} />
               </Switch>
               <Footer />
             </Route>

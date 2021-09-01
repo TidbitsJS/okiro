@@ -24,7 +24,7 @@ const ArticleCard = ({ postData }) => {
           </Link>
         </div>
         <div className="okiro__article-card_content-tag">
-          <Tag title={tags[0]} />
+          <Tag title={tags[0]} link={`/tag/${tags[0]}`} />
           {member ? (
             <div className="okiro__article-card_content-tag_private">
               <IoLockClosed />

@@ -83,7 +83,7 @@ const AuthorDetails = () => {
               </div>
             </div>
           </InfoCard>
-          <LatestPost post={authorArticles[0]} showAllTags={false} />
+          <LatestPost post={authorArticles[0]} showAllTags={true} />
           <div className="okiro__authorDetails_articles">
             {authorArticles.slice(1).map((article, index) => (
               <ArticleCard

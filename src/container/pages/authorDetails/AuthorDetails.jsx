@@ -6,7 +6,10 @@ import InfoCard from "../../../components/infocard/InfoCard";
 import Spinner from "../../../components/spinner/Spinner";
 import postData from "../../../data/post/post";
 import SocialIcon from "../../../components/social/SocialIcon";
+import LatestPost from "../../../components/latestpost/LatestPost";
 import { FaGithubAlt, FaInstagram, FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { pageVariants } from "../../../animation/motion";
 
 import "./authorDetails.css";
 
@@ -16,6 +19,8 @@ const AuthorDetails = () => {
   const authorParam = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const getAuthor = window.uniqueAuthors.filter(
       (author) => author.authorName === authorParam.authorName
     );
@@ -29,7 +34,13 @@ const AuthorDetails = () => {
   }, [authorParam.authorName]);
 
   return (
-    <div className="okiro__authorDetails">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="okiro__authorDetails"
+    >
       {authorInfo && authorArticles ? (
         <>
           <InfoCard imgLink={authorInfo.authorbg}>
@@ -72,8 +83,9 @@ const AuthorDetails = () => {
               </div>
             </div>
           </InfoCard>
+          <LatestPost post={authorArticles[0]} showAllTags={false} />
           <div className="okiro__authorDetails_articles">
-            {authorArticles.map((article, index) => (
+            {authorArticles.slice(1).map((article, index) => (
               <ArticleCard
                 postData={article}
                 key={article.authorName + article.id}
@@ -84,7 +96,7 @@ const AuthorDetails = () => {
       ) : (
         <Spinner />
       )}
-    </div>
+    </motion.div>
   );
 };
 

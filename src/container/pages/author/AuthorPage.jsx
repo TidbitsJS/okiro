@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { pageVariants } from "../../../animation/motion";
 
 import "./authorPage.css";
 
 const AuthorPage = () => {
   const uniqueAuthorsLength = window.uniqueAuthors.length;
+
+  useEffect(() => window.scrollTo(0, 0), []);
+
   return (
-    <div className="okiro__authorpage">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="okiro__authorpage"
+    >
       <div className="okiro__homepage__previewPosts">
         <div className="okiro__hompage__previewPosts-title">
           <h2>Authors</h2>
@@ -78,7 +89,7 @@ const AuthorPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

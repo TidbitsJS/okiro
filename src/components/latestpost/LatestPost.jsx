@@ -73,7 +73,9 @@ const LatestPost = ({ title, post, showAllTags }) => {
             <img src={post.authorUrl} alt="author" />
           </div>
           <div className="okiro__author-info">
-            <h3>{post.author}</h3>
+            <Link to={`/author/${post.author}`}>
+              <h3>{post.author}</h3>
+            </Link>
             <p>
               {date} ∙ {Math.floor(Math.random() * 15)} minutes read{" "}
             </p>

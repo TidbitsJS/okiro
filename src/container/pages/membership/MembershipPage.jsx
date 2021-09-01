@@ -44,10 +44,6 @@ const planData = [
 ];
 
 const PlanCard = ({ plan: { type, price, features } }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   return (
     <div className="okiro__membership-plans_div-card">
       <div className="okiro__membership-plans_div-card_type">{type}</div>
@@ -73,6 +69,10 @@ const PlanCard = ({ plan: { type, price, features } }) => {
 };
 
 const MembershipPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       initial="initial"

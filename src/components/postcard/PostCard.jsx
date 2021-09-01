@@ -16,7 +16,9 @@ const PostCard = ({ post }) => {
         <Link to={{ pathname: `/article/${id}` }}>
           <h3>{title}</h3>
         </Link>
-        <p>{author}</p>
+        <Link to={`/author/${author}`}>
+          <p>{author}</p>
+        </Link>
       </div>
     </div>
   );

@@ -19,7 +19,9 @@ const ArticleCard = ({ postData }) => {
           <Link to={{ pathname: `/article/${id}` }}>
             <h3>{title}</h3>
           </Link>
-          <p>{author}</p>
+          <Link to={`/author/${author}`}>
+            <p>{author}</p>
+          </Link>
         </div>
         <div className="okiro__article-card_content-tag">
           <Tag title={tags[0]} />

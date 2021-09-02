@@ -38,7 +38,7 @@ const BlogPage = () => {
       {article ? (
         <>
           <LatestPost post={article} showAllTags={true} />
-          <MdContent content={article.content} />
+          <MdContent content={article.content} lock={article.member} />
           <div className="okiro__blogpage__social-links">
             <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
             <SocialIcon childIcon={<FaTwitter fontSize={25} />} />

@@ -54,7 +54,7 @@ const Footer = () => {
               <Link to="/signin">
                 <p>Sign in</p>
               </Link>
-              <Link to="signup">
+              <Link to="/signup">
                 <p>Sign up</p>
               </Link>
             </div>

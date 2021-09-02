@@ -1,0 +1,163 @@
+.okiro__memberonly {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.okiro__memberonly::before {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  top: -75%;
+  width: calc(100vw - 40px);
+  height: 80%;
+  margin: 0 calc(-50vw + 20px);
+  content: "";
+  pointer-events: none;
+  background-color: #fff;
+  -webkit-mask-image: linear-gradient(
+    rgb(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.013) 8.1%,
+    rgba(0, 0, 0, 0.049) 15.5%,
+    rgba(0, 0, 0, 0.104) 22.5%,
+    rgba(0, 0, 0, 0.175) 29%,
+    rgba(0, 0, 0, 0.259) 35.3%,
+    rgba(0, 0, 0, 0.352) 41.2%,
+    rgba(0, 0, 0, 0.45) 47.1%,
+    rgba(0, 0, 0, 0.55) 52.9%,
+    rgba(0, 0, 0, 0.648) 58.8%,
+    rgba(0, 0, 0, 0.741) 64.7%,
+    rgba(0, 0, 0, 0.825) 71%,
+    rgba(0, 0, 0, 0.896) 77.5%,
+    rgba(0, 0, 0, 0.951) 84.5%,
+    rgba(0, 0, 0, 0.987) 91.9%,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    rgb(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.013) 8.1%,
+    rgba(0, 0, 0, 0.049) 15.5%,
+    rgba(0, 0, 0, 0.104) 22.5%,
+    rgba(0, 0, 0, 0.175) 29%,
+    rgba(0, 0, 0, 0.259) 35.3%,
+    rgba(0, 0, 0, 0.352) 41.2%,
+    rgba(0, 0, 0, 0.45) 47.1%,
+    rgba(0, 0, 0, 0.55) 52.9%,
+    rgba(0, 0, 0, 0.648) 58.8%,
+    rgba(0, 0, 0, 0.741) 64.7%,
+    rgba(0, 0, 0, 0.825) 71%,
+    rgba(0, 0, 0, 0.896) 77.5%,
+    rgba(0, 0, 0, 0.951) 84.5%,
+    rgba(0, 0, 0, 0.987) 91.9%,
+    #000 100%
+  );
+}
+
+.okiro__memberonly_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #d2f8f0;
+  padding: 2rem 4rem;
+  text-align: center;
+
+  max-width: 700px;
+  border-radius: 2rem;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+.okiro__memberonly_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.okiro__memberonly_text h1 {
+  padding: 0rem 1rem;
+  font-size: 41px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: var(--color-font);
+}
+
+.okiro__memberonly_text p {
+  line-height: 1.65 !important;
+  color: var(--color-font) !important;
+  font-size: 20px !important;
+  font-family: var(--font-base) !important;
+  font-weight: 400 !important;
+
+  margin: 1rem 0rem 2rem !important;
+}
+
+.okiro__memberonly .okiro__custom-button button {
+  letter-spacing: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: var(--font-alt);
+}
+
+.okiro__memberonly_box_para {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.okiro__memberonly_box_para p {
+  font-size: 13px !important;
+  text-align: center !important;
+  color: var(--color-font) !important;
+  font-family: var(--font-base) !important;
+  font-weight: 400 !important;
+}
+
+.okiro__memberonly_box_para span {
+  margin-left: 0.2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__memberonly_box {
+    padding: 2rem;
+  }
+
+  .okiro__memberonly_text h1 {
+    font-size: 25px;
+  }
+
+  .okiro__memberonly_text p {
+    font-size: 15px !important;
+  }
+
+  .okiro__memberonly .okiro__custom-button button {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .okiro__memberonly_box {
+    padding: 2rem 1rem;
+  }
+
+  .okiro__memberonly_text h1 {
+    font-size: 19px;
+  }
+
+  .okiro__memberonly_text p {
+    font-size: 12px !important;
+  }
+
+  .okiro__memberonly .okiro__custom-button button {
+    font-size: 14px;
+  }
+}

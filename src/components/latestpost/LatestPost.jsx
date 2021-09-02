@@ -1,4 +1,5 @@
 import React from "react";
+import { IoLockClosed } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Tag from "../tag/Tag";
 
@@ -40,6 +41,14 @@ const LatestPost = ({ title, post, showAllTags }) => {
 
       <div className="okiro__homepage__latest-content">
         <div className="okiro__homepage__latest-content_tags">
+          {post.member && (
+            <div
+              className="okiro__article-card_content-tag_private"
+              style={{ marginRight: 5 }}
+            >
+              <IoLockClosed />
+            </div>
+          )}
           {showAllTags ? (
             post.tags.map((tag, index) => (
               <Tag

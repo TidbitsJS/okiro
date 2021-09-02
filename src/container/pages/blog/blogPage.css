@@ -15,6 +15,24 @@
   flex-wrap: wrap;
 }
 
+.okiro__blogpage__nextpre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.okiro__blogpage__nextpre a {
+  width: 100%;
+}
+
+@media screen and (max-width: 1120px) {
+  .okiro__blogpage__nextpre {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .okiro__blogpage {
     padding: 2rem;

@@ -1,0 +1,71 @@
+.okiro__nextPrePost {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+
+  padding: 1rem;
+  background: #ede4ff;
+  margin: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.okiro__nextPrePost:hover {
+  transform: translateY(-4px);
+}
+
+.okiro__nextPrePost_img {
+  display: flex;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 1rem;
+}
+
+.okiro__nextPrePost_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.okiro__nextPrePost_content {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+
+.okiro__nextPrePost_content p {
+  margin: 0.5rem 0;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--color-font);
+  font-family: var(--font-alt);
+  line-height: 1.5;
+}
+
+.okiro__nextPrePost_content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--color-font);
+  font-family: var(--font-base);
+}
+
+@media screen and (max-width: 500px) {
+  .okiro__nextPrePost_content h2 {
+    font-size: 18px;
+  }
+
+  .okiro__nextPrePost {
+    flex-direction: column !important;
+  }
+
+  .okiro__nextPrePost_img {
+    max-width: unset;
+    width: 100%;
+    max-height: unset;
+    height: 250px;
+  }
+}

@@ -8,11 +8,13 @@ import { pageVariants } from "../../../animation/motion";
 import SocialIcon from "../../../components/social/SocialIcon";
 import { FaGithubAlt, FaInstagram, FaTwitter } from "react-icons/fa";
 import postData from "../../../data/post/post";
+import NextPrePost from "../../../components/nextpre/NextPrePost";
 
 import "./blogPage.css";
 
 const BlogPage = () => {
   const [article, setArticle] = useState(null);
+  const [articleIndex, setArticleIndex] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -20,12 +22,13 @@ const BlogPage = () => {
 
     let theArticle = postData.filter((post, index) => {
       if (post.id === id) {
+        setArticleIndex(index);
         return post;
       } else return "";
     });
 
     setArticle(...theArticle);
-  }, [id]);
+  }, [id, articleIndex]);
 
   return (
     <motion.div
@@ -35,7 +38,7 @@ const BlogPage = () => {
       variants={pageVariants}
       className="okiro__blogpage"
     >
-      {article ? (
+      {article && articleIndex ? (
         <>
           <LatestPost post={article} showAllTags={true} />
           <MdContent content={article.content} lock={article.member} />
@@ -43,6 +46,26 @@ const BlogPage = () => {
             <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
             <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
             <SocialIcon childIcon={<FaInstagram fontSize={25} />} />
+          </div>
+          <div className="okiro__blogpage__nextpre">
+            {articleIndex - 1 < 0 ? (
+              <NextPrePost postType="" article={null} content="left" />
+            ) : (
+              <NextPrePost
+                postType="Newer post"
+                article={postData[articleIndex - 1]}
+                content="left"
+              />
+            )}
+            {articleIndex + 1 >= postData.length ? (
+              <NextPrePost postType="" article={null} content="right" />
+            ) : (
+              <NextPrePost
+                postType="Older post"
+                article={postData[articleIndex + 1]}
+                content="right"
+              />
+            )}
           </div>
         </>
       ) : (

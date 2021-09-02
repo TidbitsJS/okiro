@@ -9,6 +9,8 @@
   border-radius: 1rem;
   cursor: pointer;
 
+  max-width: 610px;
+
   transition: transform 0.2s ease;
 }
 
@@ -19,7 +21,7 @@
 .okiro__nextPrePost_img {
   display: flex;
   max-width: 150px;
-  max-height: 150px;
+  height: 150px;
   border-radius: 1rem;
 }
 
@@ -51,6 +53,15 @@
   line-height: 1.3;
   color: var(--color-font);
   font-family: var(--font-base);
+}
+
+.alignStyles {
+  text-align: -webkit-right;
+  text-align: -moz-right;
+}
+
+.flexDirectionStyles {
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 500px) {

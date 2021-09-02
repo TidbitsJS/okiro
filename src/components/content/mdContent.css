@@ -41,6 +41,8 @@ h6 {
   margin: 1rem 0;
   background: #f6f7ff;
   padding: 1rem;
+
+  overflow-x: auto;
 }
 
 .okiro__mdContent strong {

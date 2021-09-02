@@ -9,6 +9,7 @@ import SocialIcon from "../../../components/social/SocialIcon";
 import { FaGithubAlt, FaInstagram, FaTwitter } from "react-icons/fa";
 import postData from "../../../data/post/post";
 import NextPrePost from "../../../components/nextpre/NextPrePost";
+import PreviewPosts from "../../../components/preview/PreviewPosts";
 
 import "./blogPage.css";
 
@@ -36,41 +37,45 @@ const BlogPage = () => {
       animate="in"
       exit="out"
       variants={pageVariants}
-      className="okiro__blogpage"
     >
-      {article && articleIndex ? (
-        <>
-          <LatestPost post={article} showAllTags={true} />
-          <MdContent content={article.content} lock={article.member} />
-          <div className="okiro__blogpage__social-links">
-            <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
-            <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
-            <SocialIcon childIcon={<FaInstagram fontSize={25} />} />
-          </div>
-          <div className="okiro__blogpage__nextpre">
-            {articleIndex - 1 < 0 ? (
-              <NextPrePost postType="" article={null} content="left" />
-            ) : (
-              <NextPrePost
-                postType="Newer post"
-                article={postData[articleIndex - 1]}
-                content="left"
-              />
-            )}
-            {articleIndex + 1 >= postData.length ? (
-              <NextPrePost postType="" article={null} content="right" />
-            ) : (
-              <NextPrePost
-                postType="Older post"
-                article={postData[articleIndex + 1]}
-                content="right"
-              />
-            )}
-          </div>
-        </>
-      ) : (
-        <Spinner />
-      )}
+      <div className="okiro__blogpage">
+        {article && articleIndex !== null ? (
+          <>
+            <LatestPost post={article} showAllTags={true} />
+            <MdContent content={article.content} lock={article.member} />
+            <div className="okiro__blogpage__social-links">
+              <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
+              <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
+              <SocialIcon childIcon={<FaInstagram fontSize={25} />} />
+            </div>
+            <div className="okiro__blogpage__nextpre">
+              {articleIndex - 1 < 0 ? (
+                <NextPrePost postType="" article={null} content="left" />
+              ) : (
+                <NextPrePost
+                  postType="Newer post"
+                  article={postData[articleIndex - 1]}
+                  content="left"
+                />
+              )}
+              {articleIndex + 1 >= postData.length ? (
+                <NextPrePost postType="" article={null} content="right" />
+              ) : (
+                <NextPrePost
+                  postType="Older post"
+                  article={postData[articleIndex + 1]}
+                  content="right"
+                />
+              )}
+            </div>
+          </>
+        ) : (
+          <Spinner />
+        )}
+      </div>
+      <div className="okiro__blogpage-seemorePosts">
+        <PreviewPosts postData={postData.slice(12)} title="see more" />
+      </div>
     </motion.div>
   );
 };

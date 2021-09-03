@@ -17,6 +17,7 @@ const BlogPage = () => {
   const [article, setArticle] = useState(null);
   const [articleIndex, setArticleIndex] = useState(null);
   const { id } = useParams();
+  let randomArticles = [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,6 +31,20 @@ const BlogPage = () => {
 
     setArticle(...theArticle);
   }, [id, articleIndex]);
+
+  if (!article) {
+    randomArticles = postData;
+  } else {
+    postData.forEach((post, index) => {
+      if (
+        index !== articleIndex &&
+        index !== articleIndex - 1 &&
+        index !== articleIndex + 1
+      ) {
+        randomArticles.push(post);
+      }
+    });
+  }
 
   return (
     <motion.div
@@ -69,12 +84,18 @@ const BlogPage = () => {
               )}
             </div>
           </>
-        ) : (
+        ) : article ? (
           <Spinner />
+        ) : (
+          <div className="okiro__blogpage-error">
+            <div>
+              <h2>Oops, an Error.</h2>
+            </div>
+          </div>
         )}
       </div>
       <div className="okiro__blogpage-seemorePosts">
-        <PreviewPosts postData={postData.slice(12)} title="see more" />
+        <PreviewPosts postData={randomArticles.slice(0, 4)} title="see more" />
       </div>
     </motion.div>
   );

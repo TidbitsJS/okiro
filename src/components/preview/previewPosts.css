@@ -1,4 +1,5 @@
 .okiro__homepage__previewPosts {
+  width: 100%;
   display: flex;
   flex-direction: row;
 

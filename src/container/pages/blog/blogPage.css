@@ -29,8 +29,32 @@
 
 .okiro__blogpage-seemorePosts {
   display: flex;
+  flex-direction: row;
 
   padding: 1rem 2rem;
+}
+
+.okiro__blogpage-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.okiro__blogpage-error div {
+  display: flex;
+
+  background: #fff5ea;
+  border-radius: 1rem;
+}
+
+.okiro__blogpage-error div h2 {
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.5;
+  font-weight: 900;
+  color: var(--color-font);
 }
 
 @media screen and (max-width: 1120px) {

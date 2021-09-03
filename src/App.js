@@ -17,6 +17,7 @@ import NotFound from "./container/notfound/NotFound";
 import Features from "./container/pages/features/Features";
 
 import "./App.css";
+import AboutUs from "./container/pages/about/AboutUs";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
                 />
                 <Route exact path="/membership" component={MembershipPage} />
                 <Route exact path="/features" component={Features} />
+                <Route exact path="/about" component={AboutUs} />
                 <Route exact path="/article/:id" component={BlogPage} />
                 <Route exact path="/tags" component={TagPage} />
                 <Route exact path="/tag/:tagName" component={TagDetails} />

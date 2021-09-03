@@ -1,0 +1,195 @@
+.okiro__aboutus {
+  display: flex;
+  flex-direction: column;
+}
+
+.okiro__aboutus-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem 6rem;
+}
+
+.okiro__aboutus-content h1 {
+  font-size: 64px;
+  line-height: 1.5;
+  font-family: var(--font-base);
+  color: var(--color-font);
+  font-weight: 800;
+}
+
+.okiro__aboutus-content p {
+  padding: 1rem 3rem;
+  text-align: center;
+
+  display: flex;
+  font-size: 20px;
+  color: var(--color-font);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.okiro__aboutus-creators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+  background: url("../../../assets/ddwhite.svg");
+  background-position: center;
+  background-size: cover;
+
+  margin-top: 2rem;
+
+  padding: 6rem;
+}
+
+.okiro__aboutus-creators::before {
+  background: linear-gradient(-5deg, #fff 16px, transparent 0),
+    linear-gradient(15deg, #fff 16px, transparent 0);
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  width: 100%;
+  height: 32px;
+  transform: rotate(180deg);
+}
+
+.okiro__aboutus-creators::after {
+  background: linear-gradient(-5deg, #fff 16px, transparent 0),
+    linear-gradient(15deg, #fff 16px, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0px;
+  width: 100%;
+  height: 32px;
+}
+
+.okiro__aboutus-creators-div {
+  display: flex;
+  margin: 0 10vw;
+
+  background: #fff;
+}
+
+.okiro__aboutus-creators-div_img {
+  width: 450px;
+  display: flex;
+
+  position: relative;
+  z-index: 1;
+}
+
+.okiro__aboutus-creators-div_img img {
+  width: 100%;
+  min-height: 450px;
+}
+
+.okiro__aboutus-creators-div_info {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+.okiro__aboutus-creators-div_infohead {
+  margin-bottom: 1rem;
+}
+
+.okiro__aboutus-creators-div_infohead h3 {
+  font-size: 34px;
+  color: var(--color-font);
+  font-family: var(--font-base);
+  line-height: 1.2;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.okiro__aboutus-creators-div_infohead p {
+  font-size: 15px;
+  margin-top: 0.3rem;
+  color: #9b9b9b;
+  font-family: var(--font-alt);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+}
+
+.okiro__aboutus-creators-div_infopara p {
+  margin: 1rem 0;
+  font-size: 17px;
+  color: var(--color-font);
+  line-height: 1.56;
+  font-family: var(--font-alt);
+}
+
+@media screen and (max-width: 950px) {
+  .okiro__aboutus-creators-div {
+    flex-direction: column;
+    margin: 0.5rem 0;
+  }
+
+  .okiro__aboutus-content {
+    padding: 2rem;
+  }
+
+  .okiro__aboutus-content p {
+    padding: 1rem 0rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .okiro__aboutus-creators {
+    padding: 6rem 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .okiro__aboutus-content h1 {
+    font-size: 34px;
+  }
+
+  .okiro__aboutus-creators-div {
+    width: 100%;
+  }
+
+  .okiro__aboutus-creators-div_img,
+  .okiro__aboutus-creators-div_info {
+    width: 100%;
+  }
+
+  .okiro__aboutus-creators-div_img img {
+    min-height: unset;
+    height: 100%;
+  }
+
+  .okiro__aboutus-creators-div_info {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .okiro__aboutus-content {
+    padding: 2rem 1rem;
+  }
+
+  .okiro__aboutus-content p,
+  .okiro__aboutus-creators-div_info p {
+    font-size: 15px;
+  }
+}

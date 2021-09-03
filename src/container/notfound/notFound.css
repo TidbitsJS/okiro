@@ -1,0 +1,25 @@
+.okiro__notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.okiro__notFound h2 {
+  font-size: 54px;
+  line-height: 1.5;
+  font-family: var(--font-base);
+  color: var(--color-font);
+
+  padding: 0 2rem;
+}
+
+.okiro__notFound p {
+  margin-top: 1rem;
+  font-size: 24px;
+  font-family: var(--font-alt);
+  color: var(--color-font);
+  text-align: center;
+
+  padding: 0 2rem;
+}

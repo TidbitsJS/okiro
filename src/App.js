@@ -13,6 +13,8 @@ import AuthorPage from "./container/pages/author/AuthorPage";
 import AuthorDetails from "./container/pages/authorDetails/AuthorDetails";
 import TagPage from "./container/pages/tags/TagPage";
 import TagDetails from "./container/pages/tagDetails/TagDetails";
+import NotFound from "./container/notfound/NotFound";
+import Features from "./container/pages/features/Features";
 
 import "./App.css";
 
@@ -37,9 +39,11 @@ function App() {
                   component={AuthorDetails}
                 />
                 <Route exact path="/membership" component={MembershipPage} />
+                <Route exact path="/features" component={Features} />
                 <Route exact path="/article/:id" component={BlogPage} />
                 <Route exact path="/tags" component={TagPage} />
                 <Route exact path="/tag/:tagName" component={TagDetails} />
+                <Route path="*" component={NotFound} />
               </Switch>
               <Footer />
             </Route>

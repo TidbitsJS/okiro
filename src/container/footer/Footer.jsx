@@ -70,7 +70,9 @@ const Footer = () => {
                 <p>Tags</p>
               </Link>
               <p>Version</p>
-              <p>404</p>
+              <Link to="/404">
+                <p>404</p>
+              </Link>
             </div>
           </div>
         </div>

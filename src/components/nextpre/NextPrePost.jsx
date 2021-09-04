@@ -16,6 +16,7 @@ const NextPrePost = ({ postType, article, content }) => {
               ? "okiro__nextPrePost flexDirectionStyles"
               : "okiro__nextPrePost"
           }
+          style={{ background: article.color }}
         >
           <div className="okiro__nextPrePost_img">
             <img src={article.url} alt="nextprepost" />

@@ -57,7 +57,11 @@ const BlogPage = () => {
         {article && articleIndex !== null ? (
           <>
             <LatestPost post={article} showAllTags={true} />
-            <MdContent content={article.content} lock={article.member} />
+            <MdContent
+              content={article.content}
+              lock={article.member}
+              color={article.color}
+            />
             <div className="okiro__blogpage__social-links">
               <SocialIcon childIcon={<FaGithubAlt fontSize={25} />} />
               <SocialIcon childIcon={<FaTwitter fontSize={25} />} />
@@ -68,7 +72,7 @@ const BlogPage = () => {
                 <NextPrePost postType="" article={null} content="left" />
               ) : (
                 <NextPrePost
-                  postType="Newer post"
+                  postType="Older post"
                   article={postData[articleIndex - 1]}
                   content="left"
                 />
@@ -77,7 +81,7 @@ const BlogPage = () => {
                 <NextPrePost postType="" article={null} content="right" />
               ) : (
                 <NextPrePost
-                  postType="Older post"
+                  postType="Newer post"
                   article={postData[articleIndex + 1]}
                   content="right"
                 />

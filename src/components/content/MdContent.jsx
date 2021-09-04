@@ -6,7 +6,7 @@ import Spinner from "../spinner/Spinner";
 
 import "./mdContent.css";
 
-const MdContent = ({ content, lock }) => {
+const MdContent = ({ content, lock, color }) => {
   const [mdText, setMdText] = useState(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const MdContent = ({ content, lock }) => {
       {mdText ? (
         <>
           <ReactMarkdown children={mdText} remarkPlugins={[remarkGfm]} />
-          {lock ? <MemberOnly /> : null}
+          {lock ? <MemberOnly color={color} /> : null}
         </>
       ) : (
         <Spinner />

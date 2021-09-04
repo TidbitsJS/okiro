@@ -41,7 +41,10 @@ const HomePage = () => {
           <CustomButton title="Load more" click={handleClick} />
         )}
       </div>
-      <PreviewPosts postData={postData.slice(12)} title="story" />
+      <PreviewPosts
+        postData={postData.slice(Math.max(postData.length - 4, 1))}
+        title="story"
+      />
       <Subscribe />
     </motion.div>
   );

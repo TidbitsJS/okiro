@@ -4,10 +4,10 @@ import CustomButton from "../button/CustomButton";
 
 import "./memberOnly.css";
 
-const MemberOnly = () => {
+const MemberOnly = ({ color }) => {
   return (
     <div className="okiro__memberonly">
-      <div className="okiro__memberonly_box">
+      <div className="okiro__memberonly_box" style={{ background: color }}>
         <div className="okiro__memberonly_text">
           <h1>This post is for paying subsribers only</h1>
           <p>

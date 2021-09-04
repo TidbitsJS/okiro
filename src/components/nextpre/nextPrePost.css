@@ -20,6 +20,7 @@
 
 .okiro__nextPrePost_img {
   display: flex;
+  width: 50%;
   max-width: 150px;
   height: 150px;
   border-radius: 1rem;
@@ -76,7 +77,5 @@
   .okiro__nextPrePost_img {
     max-width: unset;
     width: 100%;
-    max-height: unset;
-    height: 250px;
   }
 }

@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { pageVariants } from "../../../animation/motion";
 import SeeAlso from "../../../components/seealso/SeeAlso";
 
@@ -38,13 +39,15 @@ const TagPage = () => {
             .slice(0, uniqueTagsLength - 1)
             .map((tag, index) => (
               <div className="okiro__post-card" key={tag.tagName + index}>
-                <div className="okiro__post-card__image">
-                  <img src={tag.tagUrl} alt="post-card" />
-                </div>
-                <div className="okiro__post-card__content">
-                  <h3>{tag.tagName}</h3>
-                  <p>{tag.total} posts</p>
-                </div>
+                <Link to={`/tag/${tag.tagName}`}>
+                  <div className="okiro__post-card__image">
+                    <img src={tag.tagUrl} alt="post-card" />
+                  </div>
+                  <div className="okiro__post-card__content">
+                    <h3>{tag.tagName}</h3>
+                    <p>{tag.total} posts</p>
+                  </div>
+                </Link>
               </div>
             ))}
         </div>

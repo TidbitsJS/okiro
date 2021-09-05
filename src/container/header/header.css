@@ -66,8 +66,8 @@
   justify-content: flex-start;
   min-width: 170px;
   position: absolute;
-  top: 150%;
-  right: -10%;
+
+  margin: 2rem 0rem 0rem -3rem;
 
   background: var(--color-two);
   padding: 1rem 0.7rem;

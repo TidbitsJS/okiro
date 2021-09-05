@@ -47,65 +47,65 @@ const Header = () => {
           </li>
           <li>
             <BsThreeDots onClick={() => setShowDotLinks(!showDotLinks)} />
+
+            {showDotLinks ? (
+              <div className="okiro__header__dotLinks">
+                <ul>
+                  <li className="special-link">
+                    <NavLink
+                      exact
+                      to="/authors"
+                      activeClassName="isActive"
+                      onClick={() => setShowDotLinks(!showDotLinks)}
+                    >
+                      Authors
+                    </NavLink>
+                  </li>
+                  <li className="special-link">
+                    <NavLink
+                      exact
+                      to="/tags"
+                      activeClassName="isActive"
+                      onClick={() => setShowDotLinks(!showDotLinks)}
+                    >
+                      Tags
+                    </NavLink>
+                  </li>
+                  <li className="special-link">
+                    <NavLink
+                      exact
+                      to="/about"
+                      activeClassName="isActive"
+                      onClick={() => setShowDotLinks(!showDotLinks)}
+                    >
+                      About
+                    </NavLink>
+                  </li>
+                  <li className="special-link">
+                    <NavLink
+                      exact
+                      to="/subscribe"
+                      activeClassName="isActive"
+                      onClick={() => setShowDotLinks(!showDotLinks)}
+                    >
+                      Subscribe
+                    </NavLink>
+                  </li>
+                  <li className="special-link">
+                    <NavLink
+                      exact
+                      to="contact"
+                      activeClassName="isActive"
+                      onClick={() => setShowDotLinks(!showDotLinks)}
+                    >
+                      Contact
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            ) : null}
           </li>
         </ul>
-
-        {showDotLinks ? (
-          <div className="okiro__header__dotLinks">
-            <ul>
-              <li className="special-link">
-                <NavLink
-                  exact
-                  to="/authors"
-                  activeClassName="isActive"
-                  onClick={() => setShowDotLinks(!showDotLinks)}
-                >
-                  Authors
-                </NavLink>
-              </li>
-              <li className="special-link">
-                <NavLink
-                  exact
-                  to="/tags"
-                  activeClassName="isActive"
-                  onClick={() => setShowDotLinks(!showDotLinks)}
-                >
-                  Tags
-                </NavLink>
-              </li>
-              <li className="special-link">
-                <NavLink
-                  exact
-                  to="/about"
-                  activeClassName="isActive"
-                  onClick={() => setShowDotLinks(!showDotLinks)}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li className="special-link">
-                <NavLink
-                  exact
-                  to="/subscribe"
-                  activeClassName="isActive"
-                  onClick={() => setShowDotLinks(!showDotLinks)}
-                >
-                  Subscribe
-                </NavLink>
-              </li>
-              <li className="special-link">
-                <NavLink
-                  exact
-                  to="contact"
-                  activeClassName="isActive"
-                  onClick={() => setShowDotLinks(!showDotLinks)}
-                >
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        ) : null}
       </div>
 
       <div className="okiro__header__logo">

@@ -38,7 +38,13 @@
   flex: 5;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 1000px) {
+  .okiro__homepage__previewPosts-posts {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
